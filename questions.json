@@ -1,0 +1,548 @@
+{
+    "Component-Based Systems": [
+        {
+            "question": "What is a core characteristic of a software component?",
+            "choices": ["A. Requires a main method", "B. Is always a class", "C. Is independently deployable with well-defined interfaces", "D. Must use object-oriented inheritance"],
+            "answer": "C",
+            "reason": "A component is a reusable, independently deployable software unit with well-defined interfaces."
+        },
+        {
+            "question": "What does CBSE stand for?",
+            "choices": ["A. Centralized Binary Software Engineering", "B. Component-Based Software Engineering", "C. Component Binary System Engineering", "D. Core-Based System Engineering"],
+            "answer": "B",
+            "reason": "CBSE stands for Component-Based Software Engineering, an approach that builds systems using pre-existing, reusable components."
+        },
+        {
+            "question": "Which term describes dividing a system into independent, self-contained parts?",
+            "choices": ["A. Reusability", "B. Modularity", "C. Encapsulation", "D. Composition"],
+            "answer": "B",
+            "reason": "Modularity refers to dividing a system into independent, self-contained components."
+        },
+        {
+            "question": "What is the purpose of encapsulation in a component?",
+            "choices": ["A. To expose internal data for easy access", "B. To prevent the component from being reused", "C. To hide internal details and expose only public interfaces", "D. To enforce use of object inheritance"],
+            "answer": "C",
+            "reason": "Encapsulation hides the internal details of a component and exposes only the public interfaces."
+        },
+        {
+            "question": "What defines structure, behavior, and interaction standards of components?",
+            "choices": ["A. Component Model", "B. Component Framework", "C. Component Repository", "D. Component Adapter"],
+            "answer": "A",
+            "reason": "A Component Model defines the structure, behavior, and interaction standards of components."
+        },
+        {
+            "question": "Which architecture pattern uses small, independent services often deployed via containers?",
+            "choices": ["A. Monolithic Architecture", "B. Microservices Architecture", "C. CORBA", "D. Client-Server Architecture"],
+            "answer": "B",
+            "reason": "Microservices Architecture uses small, independent services often deployed via containers (e.g., Docker, Kubernetes)."
+        },
+        {
+            "question": "What does a Component Adapter do?",
+            "choices": ["A. Stores components in a central database", "B. Bridges incompatible component interfaces", "C. Provides deployment specifications", "D. Defines the component model"],
+            "answer": "B",
+            "reason": "A Component Adapter is a software element that bridges incompatible component interfaces."
+        },
+        {
+            "question": "In component composition, which type involves components being called one after another by an external application?",
+            "choices": ["A. Additive Composition", "B. Hierarchical Composition", "C. Sequential Composition", "D. Parallel Composition"],
+            "answer": "C",
+            "reason": "Sequential Composition involves components being called in sequence by an external application."
+        },
+        {
+            "question": "Which of the following is an obsolete framework for cross-platform component communication?",
+            "choices": ["A. CORBA", "B. SOA", "C. Microservices", "D. REST"],
+            "answer": "A",
+            "reason": "CORBA (Common Object Request Broker Architecture) is an obsolete framework that enabled components to communicate across languages and platforms."
+        },
+        {
+            "question": "How do components differ from objects?",
+            "choices": ["A. Components are lower-level constructs than objects", "B. Objects are reusable across systems, components are not", "C. Components are higher-level, coarse-grained reusable modules; objects are fine-grained instances of classes", "D. There is no difference between components and objects"],
+            "answer": "C",
+            "reason": "Components are higher-level, coarse-grained reusable modules, while objects are fine-grained instances of classes."
+        },
+        {
+            "question": "Which of the following is the main benefit of reusability in CBSE?",
+            "choices": ["A. Increased code complexity", "B. Reduced system performance", "C. Faster development and lower costs", "D. Increased need for manual testing"],
+            "answer": "C",
+            "reason": "Reusability allows components to be used across multiple systems, resulting in faster development and lower costs."
+        },
+        {
+            "question": "Which term describes the ability to combine components to form larger systems?",
+            "choices": ["A. Adaptability", "B. Composability", "C. Encapsulation", "D. Modularization"],
+            "answer": "B",
+            "reason": "Composability refers to the ability to combine components to form larger systems."
+        },
+        {
+            "question": "What does a Component Repository typically store?",
+            "choices": ["A. Source code only", "B. Executable files only", "C. Components, their metadata, and interfaces", "D. Deployment logs"],
+            "answer": "C",
+            "reason": "A Component Repository stores components, their metadata, and interfaces."
+        },
+        {
+            "question": "What is an example of a Component Repository mentioned in the lecture?",
+            "choices": ["A. Docker Hub", "B. GitHub", "C. Maven Central Repository", "D. NPM"],
+            "answer": "C",
+            "reason": "Maven Central Repository is an example of a Component Repository."
+        },
+        {
+            "question": "Which interface type specifies services a component offers?",
+            "choices": ["A. Requires Interface", "B. Adapter Interface", "C. Provides Interface", "D. Hidden Interface"],
+            "answer": "C",
+            "reason": "Provides Interface specifies the services a component offers to others."
+        },
+        {
+            "question": "Which interface type specifies services a component needs from other components?",
+            "choices": ["A. Requires Interface", "B. Adapter Interface", "C. Provides Interface", "D. Implementation Interface"],
+            "answer": "A",
+            "reason": "Requires Interface specifies the services a component needs from others."
+        },
+        {
+            "question": "In which type of component composition does one component directly call another?",
+            "choices": ["A. Sequential Composition", "B. Hierarchical Composition", "C. Additive Composition", "D. Parallel Composition"],
+            "answer": "B",
+            "reason": "Hierarchical Composition involves one component directly calling another component."
+        },
+        {
+            "question": "In Additive Composition, components:",
+            "choices": ["A. Call each other directly", "B. Call each other sequentially", "C. Do not call each other and operate independently", "D. Must share the same interface"],
+            "answer": "C",
+            "reason": "In Additive Composition, components do not call each other and operate independently."
+        },
+        {
+            "question": "Which architecture involves services as stand-alone entities communicating via standard protocols?",
+            "choices": ["A. Monolithic Architecture", "B. Service-Oriented Architecture (SOA)", "C. Microkernel Architecture", "D. MVC Architecture"],
+            "answer": "B",
+            "reason": "Service-Oriented Architecture (SOA) involves stand-alone services communicating via standard protocols like SOAP and REST."
+        },
+        {
+            "question": "Which of the following statements about CORBA is correct?",
+            "choices": ["A. CORBA is a modern framework based on REST APIs", "B. CORBA uses Object Request Brokers and IIOP", "C. CORBA is required for Microservices", "D. CORBA is a proprietary Microsoft technology"],
+            "answer": "B",
+            "reason": "CORBA (Common Object Request Broker Architecture) used Object Request Brokers (ORBs) and the Internet Inter-ORB Protocol (IIOP)."
+        },
+                {
+            "question": "Which of the following best describes the granularity of Objects compared to Components?",
+            "choices": ["A. Objects are coarse-grained; Components are fine-grained", "B. Both Objects and Components are fine-grained", "C. Objects are fine-grained; Components are coarse-grained", "D. Both Objects and Components are coarse-grained"],
+            "answer": "C",
+            "reason": "Objects are fine-grained instances of classes; Components are higher-level, coarse-grained reusable modules."
+        },
+        {
+            "question": "In which architecture are services typically stateless and independently deployable?",
+            "choices": ["A. SOA", "B. Microservices", "C. CORBA", "D. Monolithic"],
+            "answer": "B",
+            "reason": "Microservices architecture uses small, independently deployable services that are often stateless."
+        },
+        {
+            "question": "Which architecture commonly uses SOAP as a communication protocol?",
+            "choices": ["A. Microservices", "B. Component Model", "C. SOA", "D. Object-Oriented"],
+            "answer": "C",
+            "reason": "Service-Oriented Architecture (SOA) often uses SOAP as a standard communication protocol."
+        },
+        {
+            "question": "Which of the following is true about Components in comparison to Objects?",
+            "choices": ["A. Components are runtime instances of classes", "B. Objects are deployed independently", "C. Components are deployed independently with well-defined interfaces", "D. Objects and Components are interchangeable"],
+            "answer": "C",
+            "reason": "Components are independently deployable software units with well-defined interfaces, unlike typical objects."
+        },
+        {
+            "question": "Which architecture pattern is more likely to utilize containerization technologies such as Docker?",
+            "choices": ["A. Object-Oriented Architecture", "B. SOA", "C. Monolithic Architecture", "D. Microservices Architecture"],
+            "answer": "D",
+            "reason": "Microservices Architecture commonly uses containerization technologies like Docker and orchestration tools like Kubernetes."
+        },
+        {
+            "question": "Which element defines the standards for structure, behavior, and interaction of components?",
+            "choices": ["A. Component Framework", "B. Component Adapter", "C. Component Model", "D. Microservice"],
+            "answer": "C",
+            "reason": "The Component Model defines the structure, behavior, and interaction standards for components."
+        },
+        {
+            "question": "Which element provides the runtime environment and manages lifecycle of components?",
+            "choices": ["A. Component Model", "B. Component Repository", "C. Component Framework", "D. Microservice"],
+            "answer": "C",
+            "reason": "A Component Framework provides the runtime environment for components and manages their lifecycle and communication."
+        },
+        {
+            "question": "In terms of service composition, which architecture often involves orchestration via an Enterprise Service Bus (ESB)?",
+            "choices": ["A. Object-Oriented Architecture", "B. Microservices", "C. SOA", "D. Component Framework"],
+            "answer": "C",
+            "reason": "SOA often uses an Enterprise Service Bus (ESB) for orchestrating and mediating services."
+        },
+        {
+            "question": "Which architecture typically emphasizes loose coupling and decentralized governance?",
+            "choices": ["A. Object-Oriented", "B. SOA", "C. Microservices", "D. Monolithic"],
+            "answer": "C",
+            "reason": "Microservices architecture emphasizes loose coupling, decentralized data management, and independent governance of services."
+        },
+        {
+            "question": "Which architecture tends to involve larger, more complex service contracts and centralized control?",
+            "choices": ["A. Microservices", "B. Component Framework", "C. SOA", "D. Object-Oriented"],
+            "answer": "C",
+            "reason": "SOA often involves larger and more complex service contracts and centralized control mechanisms like ESB."
+        }
+    ],
+    "Java Crash Course & Introduction to Maven": [
+        {
+            "question": "Which component of the JVM is responsible for loading classes?",
+            "choices": ["A. Execution Engine", "B. Class Loader", "C. JIT Compiler", "D. Garbage Collector"],
+            "answer": "B",
+            "reason": "The Class Loader in the JVM is responsible for loading classes."
+        },
+        {
+            "question": "What is the primary purpose of the Java Virtual Machine (JVM)?",
+            "choices": ["A. Compile Java source code", "B. Interpret HTML files", "C. Execute Java bytecode on any platform", "D. Manage database connections"],
+            "answer": "C",
+            "reason": "The JVM executes Java bytecode on any platform, enabling Java's platform independence."
+        },
+        {
+            "question": "Which Java component provides both the JVM and core libraries but no development tools?",
+            "choices": ["A. JDK", "B. JRE", "C. IDE", "D. JVM"],
+            "answer": "B",
+            "reason": "The JRE provides the JVM and core libraries but does not include development tools."
+        },
+        {
+            "question": "Which pillar of Object-Oriented Programming involves hiding implementation details and exposing only essential features?",
+            "choices": ["A. Inheritance", "B. Polymorphism", "C. Abstraction", "D. Encapsulation"],
+            "answer": "C",
+            "reason": "Abstraction hides implementation details and exposes only the essential features."
+        },
+        {
+            "question": "Which Java keyword is used to define a class that cannot be instantiated directly?",
+            "choices": ["A. interface", "B. static", "C. abstract", "D. final"],
+            "answer": "C",
+            "reason": "An abstract class cannot be instantiated directly and is used to define common behavior."
+        },
+        {
+            "question": "Which keyword is used to indicate a method or variable is accessible everywhere?",
+            "choices": ["A. private", "B. protected", "C. public", "D. package-private"],
+            "answer": "C",
+            "reason": "The public keyword makes a method or variable accessible from anywhere."
+        },
+        {
+            "question": "What type of polymorphism is achieved through method overloading?",
+            "choices": ["A. Runtime polymorphism", "B. Dynamic polymorphism", "C. Compile-time polymorphism", "D. Late binding polymorphism"],
+            "answer": "C",
+            "reason": "Method overloading achieves compile-time polymorphism."
+        },
+        {
+            "question": "In Java, what is the purpose of the `finally` block in exception handling?",
+            "choices": ["A. To catch exceptions", "B. To throw exceptions", "C. To always execute cleanup code", "D. To skip code execution"],
+            "answer": "C",
+            "reason": "The finally block is used to execute cleanup code that must run regardless of whether an exception is thrown."
+        },
+        {
+            "question": "Which interface is part of the Java Collections Framework?",
+            "choices": ["A. Map", "B. HashCode", "C. Thread", "D. Iterator"],
+            "answer": "A",
+            "reason": "Map is a core interface in the Java Collections Framework for storing key-value pairs."
+        },
+        {
+            "question": "What is the purpose of using Generics in Java?",
+            "choices": ["A. To improve runtime performance", "B. To enable dynamic typing", "C. To allow type-safe operations on various types", "D. To avoid using interfaces"],
+            "answer": "C",
+            "reason": "Generics enable type-safe operations on various types, allowing for reusable and flexible code."
+        },
+                {
+            "question": "Which file defines project configuration in a Maven project?",
+            "choices": ["A. pom.properties", "B. pom.xml", "C. build.gradle", "D. config.yaml"],
+            "answer": "B",
+            "reason": "Maven uses the POM (Project Object Model), defined in the pom.xml file, to configure the project."
+        },
+        {
+            "question": "What does Maven's dependency management help developers achieve?",
+            "choices": ["A. Writing unit tests", "B. Managing transitive dependencies", "C. Improving UI responsiveness", "D. Simplifying database configuration"],
+            "answer": "B",
+            "reason": "Maven’s dependency management helps automatically resolve and manage transitive dependencies across the project."
+        },
+        {
+            "question": "Which Maven lifecycle phase compiles the source code?",
+            "choices": ["A. validate", "B. test", "C. compile", "D. install"],
+            "answer": "C",
+            "reason": "The compile phase in Maven compiles the project’s source code."
+        },
+        {
+            "question": "In which type of Maven repository are dependencies typically stored on a developer's machine?",
+            "choices": ["A. Central", "B. Local", "C. Remote", "D. Cloud"],
+            "answer": "B",
+            "reason": "A local repository is stored on the developer's machine, typically under ~/.m2/repository."
+        },
+        {
+            "question": "What is a Maven archetype?",
+            "choices": ["A. A runtime dependency", "B. A static code analyzer", "C. A project template", "D. A test framework"],
+            "answer": "C",
+            "reason": "A Maven archetype is a project template used to quickly create pre-configured project structures."
+        },
+        {
+            "question": "In Maven, what does the 'provided' dependency scope mean?",
+            "choices": ["A. Dependency used only for unit tests", "B. Dependency available at compile/runtime", "C. Dependency provided by the runtime environment", "D. Dependency only available in production"],
+            "answer": "C",
+            "reason": "The 'provided' scope means the dependency will be provided by the runtime environment (e.g., servlet container or app server)."
+        },
+        {
+            "question": "Which is a key benefit of using a Multi-Module Maven project?",
+            "choices": ["A. Increases build time", "B. Reduces test coverage", "C. Encourages tight coupling", "D. Promotes modularity and separation of concerns"],
+            "answer": "D",
+            "reason": "A Multi-Module Maven project promotes modularity, separation of concerns, and efficient build management."
+        },
+        {
+            "question": "How is component-based design different from inheritance-based design?",
+            "choices": ["A. It uses class hierarchies", "B. It prefers composition over inheritance", "C. It requires multiple inheritance", "D. It avoids using interfaces"],
+            "answer": "B",
+            "reason": "Component-based design prefers composition over inheritance, resulting in looser coupling and more flexible design."
+        },
+        {
+            "question": "Which concept helps automate component assembly in component-based Java systems?",
+            "choices": ["A. Static imports", "B. Dependency Injection frameworks", "C. Singleton pattern", "D. Java Reflection"],
+            "answer": "B",
+            "reason": "Dependency Injection frameworks (e.g., Spring DI) help automate component assembly and promote loose coupling."
+        },
+        {
+            "question": "In the context of component-based Java design, what is the purpose of the Whiteboard Component Model?",
+            "choices": ["A. To implement static method calls", "B. To enable dynamic service registration and decoupling", "C. To replace dependency injection", "D. To enforce compile-time type checks"],
+            "answer": "B",
+            "reason": "The Whiteboard Component Model enables dynamic service registration and decoupling at runtime, enhancing flexibility."
+        },
+                {
+            "question": "Which of the following is included in JDK but not in JRE?",
+            "choices": ["A. JVM", "B. Java core libraries", "C. Development tools like javac", "D. Bytecode interpreter"],
+            "answer": "C",
+            "reason": "JDK includes JRE + development tools such as the Java compiler (javac), debugger (jdb), and others."
+        },
+        {
+            "question": "Which of the following can be used to achieve multiple inheritance in Java?",
+            "choices": ["A. Abstract classes", "B. Interfaces", "C. Regular classes", "D. Final classes"],
+            "answer": "B",
+            "reason": "Java does not support multiple inheritance with classes, but it can be achieved using interfaces."
+        },
+        {
+            "question": "Which of the following is an advantage of Component-Based Design over Inheritance-Based Design?",
+            "choices": ["A. Promotes tight coupling", "B. Reduces reusability", "C. Promotes loose coupling and flexibility", "D. Requires deep class hierarchies"],
+            "answer": "C",
+            "reason": "Component-Based Design promotes loose coupling and flexibility by favoring composition over inheritance."
+        },
+        {
+            "question": "Compile-time polymorphism is achieved through which mechanism in Java?",
+            "choices": ["A. Method overriding", "B. Method overloading", "C. Dynamic dispatch", "D. Interfaces"],
+            "answer": "B",
+            "reason": "Compile-time polymorphism in Java is achieved through method overloading."
+        },
+        {
+            "question": "Runtime polymorphism is achieved through which mechanism in Java?",
+            "choices": ["A. Method overloading", "B. Method overriding", "C. Constructor overloading", "D. Static binding"],
+            "answer": "B",
+            "reason": "Runtime polymorphism is achieved through method overriding, where the method call is resolved at runtime."
+        },
+        {
+            "question": "Which keyword is used to declare an abstract class in Java?",
+            "choices": ["A. static", "B. abstract", "C. interface", "D. final"],
+            "answer": "B",
+            "reason": "The 'abstract' keyword is used to declare an abstract class in Java."
+        },
+        {
+            "question": "In terms of purpose, how does an Interface differ from an Abstract Class in Java?",
+            "choices": ["A. Interfaces cannot have methods", "B. Abstract Classes can only define constants", "C. Interfaces define a contract; Abstract Classes provide partial implementation", "D. Both are used identically in all cases"],
+            "answer": "C",
+            "reason": "Interfaces define a contract without implementation; Abstract Classes can provide partial implementation."
+        },
+        {
+            "question": "In component assembly, which model emphasizes dynamic service registration at runtime?",
+            "choices": ["A. Dependency Injection", "B. Factory pattern", "C. Singleton pattern", "D. Whiteboard Component Model"],
+            "answer": "D",
+            "reason": "The Whiteboard Component Model emphasizes dynamic service registration and decoupling at runtime."
+        },
+        {
+            "question": "In component assembly, which model emphasizes compile-time wiring of dependencies?",
+            "choices": ["A. Whiteboard Component Model", "B. Dependency Injection", "C. Service Locator pattern", "D. Adapter pattern"],
+            "answer": "B",
+            "reason": "Dependency Injection emphasizes compile-time wiring of dependencies, often supported by DI frameworks such as Spring."
+        },
+        {
+            "question": "Which is more flexible and suitable for designing highly decoupled systems?",
+            "choices": ["A. Inheritance-Based Design", "B. Whiteboard Component Model", "C. Static imports", "D. Deep class hierarchy"],
+            "answer": "B",
+            "reason": "The Whiteboard Component Model enables dynamic registration and decoupling, making it suitable for flexible, highly decoupled systems."
+        }
+    ],
+        "Component-Oriented Design & Architecture": [
+        {
+            "question": "Which characteristic of CBSE refers to the ability to use a component across multiple systems?",
+            "choices": ["A. Modularity", "B. Encapsulation", "C. Reusability", "D. Maintainability"],
+            "answer": "C",
+            "reason": "Reusability refers to the ability to use components across multiple systems or projects."
+        },
+        {
+            "question": "What is a primary effect of tight coupling?",
+            "choices": ["A. Increased flexibility", "B. Easier testing", "C. Harder maintenance", "D. Reduced performance"],
+            "answer": "C",
+            "reason": "Tight coupling results in less flexibility and makes maintenance and testing more difficult."
+        },
+        {
+            "question": "Loose coupling is commonly achieved using which technique?",
+            "choices": ["A. Tight inheritance", "B. Multiple inheritance", "C. Dependency Injection", "D. Static methods"],
+            "answer": "C",
+            "reason": "Loose coupling is commonly achieved using Dependency Injection, which allows components to depend on interfaces rather than concrete implementations."
+        },
+        {
+            "question": "What does a component with dependency depth 0 indicate?",
+            "choices": ["A. It is a user interface component", "B. It has no dependencies", "C. It has one external dependency", "D. It must be recompiled frequently"],
+            "answer": "B",
+            "reason": "A component with dependency depth 0 has no dependencies."
+        },
+        {
+            "question": "Which type of component dependency allows for greater flexibility at runtime?",
+            "choices": ["A. Build-time dependency", "B. Compile-time dependency", "C. Static dependency", "D. Run-time dependency"],
+            "answer": "D",
+            "reason": "Run-time dependencies allow for more flexible systems since components can be assembled or replaced dynamically at runtime."
+        },
+        {
+            "question": "In Layered Architecture, a common problem is:",
+            "choices": ["A. Poor performance", "B. Tight coupling of business logic and UI", "C. Logical layers requiring full redeployment when one layer changes", "D. Inability to add new layers"],
+            "answer": "C",
+            "reason": "In Layered Architecture, logical layers are often tightly packaged, so redeploying one layer may require redeploying the whole application."
+        },
+        {
+            "question": "What is a key benefit of Layered Component-Based Architecture compared to traditional Layered Architecture?",
+            "choices": ["A. Reduced number of components", "B. Improved performance", "C. Components can be replaced independently", "D. Simpler UI design"],
+            "answer": "C",
+            "reason": "In Layered Component-Based Architecture, components can be replaced independently, providing better flexibility and maintainability."
+        },
+        {
+            "question": "Which pattern uses a central registry for components to look up required services?",
+            "choices": ["A. Dependency Injection", "B. Singleton", "C. Service Locator", "D. Factory Method"],
+            "answer": "C",
+            "reason": "The Service Locator pattern uses a central registry where components can look up required services."
+        },
+        {
+            "question": "Which Java mechanism is used to package and distribute Java components?",
+            "choices": ["A. WAR files", "B. JARs and Packages", "C. EAR files", "D. Docker containers"],
+            "answer": "B",
+            "reason": "JARs (Java ARchive files) and Packages are used to package and distribute Java components."
+        },
+        {
+            "question": "What does a Provided Interface define in a component?",
+            "choices": ["A. Services the component requires", "B. Services the component offers to others", "C. External services used by the component", "D. Services inherited from the parent class"],
+            "answer": "B",
+            "reason": "A Provided Interface defines the services that the component offers to other components."
+        },
+        {
+            "question": "According to componentization rules, how should Entity classes typically be packaged?",
+            "choices": ["A. As standalone components", "B. Inside a UI component", "C. In a shared base library", "D. Inside the database layer"],
+            "answer": "C",
+            "reason": "Entity classes should be packaged in a shared base library and not as standalone components."
+        },
+        {
+            "question": "In an effective componentization strategy, how should business functionality be exposed?",
+            "choices": ["A. By accessing class fields directly", "B. By using public static methods", "C. Through provided interfaces only", "D. Through internal utility classes"],
+            "answer": "C",
+            "reason": "Business functionality should be exposed through provided interfaces only, following the principle of encapsulation."
+        },
+        {
+            "question": "What is a main purpose of using glue code in component-based design?",
+            "choices": ["A. To hardcode dependencies", "B. To bridge runtime dependencies dynamically", "C. To compile multiple components together", "D. To optimize database queries"],
+            "answer": "B",
+            "reason": "Glue code is used to bridge runtime dependencies dynamically and facilitate loose coupling."
+        },
+        {
+            "question": "Which component assembly model involves injecting dependencies at runtime?",
+            "choices": ["A. Singleton", "B. Whiteboard", "C. Service Locator", "D. Dependency Injection"],
+            "answer": "D",
+            "reason": "Dependency Injection (DI) involves injecting dependencies at runtime, promoting loose coupling."
+        },
+        {
+            "question": "Which component assembly model allows components to publish and consume services dynamically?",
+            "choices": ["A. Factory Pattern", "B. Singleton Pattern", "C. Whiteboard Component Model", "D. Service Locator"],
+            "answer": "C",
+            "reason": "The Whiteboard Component Model allows components to dynamically publish and consume services at runtime."
+        },
+        {
+            "question": "In the context of component interaction, what is a Required Interface?",
+            "choices": ["A. Services a component offers", "B. Services a component needs", "C. Services inherited from a parent component", "D. Services provided by the system runtime"],
+            "answer": "B",
+            "reason": "A Required Interface defines the services that a component needs from other components."
+        },
+        {
+            "question": "What is the purpose of a Port in component-based design?",
+            "choices": ["A. To connect a component to the network", "B. To enable physical deployment", "C. To define interaction points for services", "D. To encapsulate internal methods"],
+            "answer": "C",
+            "reason": "A Port defines an interaction point through which a component can provide or consume services."
+        },
+        {
+            "question": "What do Delegation Connectors do in component-based design?",
+            "choices": ["A. Manage memory allocation", "B. Connect ports to internal classes providing services", "C. Replace the need for interfaces", "D. Enable database replication"],
+            "answer": "B",
+            "reason": "Delegation Connectors connect ports to the internal classes that provide the services exposed through the port."
+        },
+        {
+            "question": "Which is a key difference between Build-time and Run-time component dependencies?",
+            "choices": ["A. Build-time dependencies are resolved dynamically", "B. Run-time dependencies can be assembled dynamically", "C. Run-time dependencies require recompilation", "D. Build-time dependencies are only used for testing"],
+            "answer": "B",
+            "reason": "Run-time dependencies can be dynamically assembled, allowing greater flexibility compared to build-time dependencies."
+        },
+        {
+            "question": "In the POS case study, replacing BillBiz & BillUI demonstrated what key advantage of component-based architecture?",
+            "choices": ["A. Improved database security", "B. Enhanced UI responsiveness", "C. Ability to replace components without redeploying the full app", "D. Reduced memory usage"],
+            "answer": "C",
+            "reason": "Replacing BillBiz & BillUI without redeploying the full app demonstrates the flexibility and modularity of component-based architecture."
+        },
+        {
+            "question": "Which type of coupling makes a system harder to maintain and test?",
+            "choices": ["A. Loose coupling", "B. Tight coupling", "C. No coupling", "D. Dynamic coupling"],
+            "answer": "B",
+            "reason": "Tight coupling makes a system harder to maintain and test because components depend heavily on each other's internal details."
+        },
+        {
+            "question": "Loose coupling can be achieved by depending on which element?",
+            "choices": ["A. Concrete classes", "B. Static methods", "C. Interfaces", "D. Inheritance hierarchies"],
+            "answer": "C",
+            "reason": "Loose coupling is achieved when components depend on interfaces rather than concrete implementations."
+        },
+        {
+            "question": "Which architecture allows components to be replaced independently?",
+            "choices": ["A. Layered Architecture", "B. Monolithic Architecture", "C. Layered Component-Based Architecture", "D. Client-Server Architecture"],
+            "answer": "C",
+            "reason": "Layered Component-Based Architecture maps layers to physical components, allowing components to be replaced independently."
+        },
+        {
+            "question": "In traditional Layered Architecture, what is a common deployment limitation?",
+            "choices": ["A. Components cannot be reused", "B. The entire application often needs redeployment if one layer changes", "C. No support for service orientation", "D. No use of interfaces"],
+            "answer": "B",
+            "reason": "In traditional Layered Architecture, layers are logical and often tightly packaged, requiring full redeployment when one layer changes."
+        },
+        {
+            "question": "Build-time component dependencies are resolved:",
+            "choices": ["A. Dynamically at runtime", "B. During application deployment", "C. During source code compilation", "D. After the application is running"],
+            "answer": "C",
+            "reason": "Build-time dependencies are resolved during source code compilation."
+        },
+        {
+            "question": "Run-time component dependencies allow:",
+            "choices": ["A. More rigid component interactions", "B. More flexible and dynamic component assembly", "C. Tighter integration between layers", "D. Compile-time dependency resolution"],
+            "answer": "B",
+            "reason": "Run-time dependencies allow for flexible and dynamic component assembly, improving adaptability."
+        },
+        {
+            "question": "Which component assembly model involves a central registry used for looking up services?",
+            "choices": ["A. Whiteboard Model", "B. Dependency Injection", "C. Service Locator", "D. Factory Pattern"],
+            "answer": "C",
+            "reason": "The Service Locator pattern uses a central registry to look up and retrieve required services."
+        },
+        {
+            "question": "Which component assembly model allows components to publish and consume services dynamically at runtime?",
+            "choices": ["A. Singleton", "B. Dependency Injection", "C. Factory", "D. Whiteboard Component Model"],
+            "answer": "D",
+            "reason": "The Whiteboard Component Model enables dynamic service publication and consumption at runtime."
+        },
+        {
+            "question": "Dependency Injection primarily provides what benefit?",
+            "choices": ["A. Dynamic service registration", "B. Compile-time wiring of dependencies to promote loose coupling", "C. Static dependency resolution", "D. Hard-coded dependency paths"],
+            "answer": "B",
+            "reason": "Dependency Injection provides compile-time wiring of dependencies, promoting loose coupling and easier testing."
+        },
+        {
+            "question": "Which interface defines services a component requires from others?",
+            "choices": ["A. Provided Interface", "B. Implemented Interface", "C. Required Interface", "D. Composite Interface"],
+            "answer": "C",
+            "reason": "A Required Interface defines the services that a component needs from other components."
+        }
+    ]
+}
