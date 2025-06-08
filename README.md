@@ -21,6 +21,10 @@ This repository is maintained as a personal study and revision aid. The MCQs are
 All lecture slides and official course materials are the intellectual property of Dr. Devender Kumar and/or SDU. Full credit is given to the original creator.  
 The MCQs in this repository are independently generated based on the content of the lecture slides and do not reproduce any proprietary materials verbatim.
 
+## 🌐 Online App
+
+You can access the MCQ repository as an interactive web app here: [https://se4-cbs.streamlit.app/](https://se4-cbs.streamlit.app/)
+
 ## ⚠️ Takedown Notice
 
 If you are the copyright holder of any material included in this repository and believe your rights are being violated, please contact me directly via GitHub or open an issue. I will respond promptly and remove the material if necessary.
