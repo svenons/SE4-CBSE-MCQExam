@@ -1272,5 +1272,1153 @@
             "answer": "B",
             "reason": "Layered Architecture can suffer from architecture sinkholes (layers that do little) and low agility/scalability as disadvantages."
         }
+    ],
+    "Lecture8: SOA & Introduction to Microservices": [
+        {
+            "question": "In SOA, which component acts as a central directory to discover services?",
+            "choices": ["A. Service Consumer", "B. Service Contract", "C. Service Registry", "D. Message Bus"],
+            "answer": "C",
+            "reason": "The Service Registry acts as a central directory where services are registered and discovered by service consumers in SOA."
+        },
+        {
+            "question": "What is the role of Service Orchestration in SOA?",
+            "choices": ["A. No central controller", "B. Services discover each other dynamically", "C. Central controller coordinates service interaction", "D. Services follow a global interaction protocol"],
+            "answer": "C",
+            "reason": "Service Orchestration uses a central controller to coordinate and manage interactions between services."
+        },
+        {
+            "question": "Which is a key characteristic of SOA?",
+            "choices": ["A. Tight coupling", "B. Single Responsibility Principle", "C. Loose coupling", "D. Monolithic deployment"],
+            "answer": "C",
+            "reason": "Loose coupling is a key characteristic of SOA, allowing services to be independent and reusable."
+        },
+        {
+            "question": "Which is a major challenge of SOA?",
+            "choices": ["A. Lack of scalability", "B. Lack of reusability", "C. Complex service governance", "D. Inability to support multiple languages"],
+            "answer": "C",
+            "reason": "Complex service governance is a key challenge in SOA, especially when managing numerous services and their interactions."
+        },
+        {
+            "question": "In CBD vs SOA, which architecture typically uses in-process calls for communication?",
+            "choices": ["A. SOA", "B. REST", "C. CBD", "D. gRPC"],
+            "answer": "C",
+            "reason": "Component-Based Development (CBD) typically uses in-process calls for communication between components."
+        },
+        {
+            "question": "In Microservices architecture, what is the best practice regarding databases?",
+            "choices": ["A. Shared database across services", "B. No database per service", "C. Database per service", "D. Central database for the whole system"],
+            "answer": "C",
+            "reason": "Best practice in Microservices is to use Database per Service, which ensures that services remain loosely coupled and independently deployable."
+        },
+        {
+            "question": "What is the purpose of an API Gateway in Microservices?",
+            "choices": ["A. Acts as a single-entry point for clients", "B. Stores microservice data", "C. Manages microservice deployment", "D. Handles service orchestration"],
+            "answer": "A",
+            "reason": "The API Gateway acts as a single-entry point for clients, managing routing, authentication, aggregation, and other cross-cutting concerns."
+        },
+        {
+            "question": "Which pattern allows services to dynamically find each other without hardcoded configurations?",
+            "choices": ["A. API Gateway", "B. Service Registry", "C. Bounded Context", "D. Event Bus"],
+            "answer": "B",
+            "reason": "The Service Discovery pattern uses a Service Registry to enable services to dynamically find each other without hardcoding IPs or hostnames."
+        },
+        {
+            "question": "Which gRPC feature allows efficient parallel requests over a single connection?",
+            "choices": ["A. REST", "B. SOAP", "C. HTTP/2 Multiplexing", "D. JSON-RPC"],
+            "answer": "C",
+            "reason": "HTTP/2 Multiplexing allows gRPC to send multiple parallel requests over a single connection efficiently."
+        },
+        {
+            "question": "Which format does gRPC use for payload serialization?",
+            "choices": ["A. JSON", "B. XML", "C. Protobuf", "D. YAML"],
+            "answer": "C",
+            "reason": "gRPC uses Protocol Buffers (Protobuf), a compact and fast binary serialization format."
+        },
+        {
+            "question": "What is the purpose of the Bounded Context pattern in Microservices architecture?",
+            "choices": ["A. To share a single database", "B. To reduce the number of services", "C. To define a clear logical boundary for domain models", "D. To centralize all API calls"],
+            "answer": "C",
+            "reason": "The Bounded Context pattern defines a clear logical boundary for domain models, helping to align one microservice per bounded context for clarity and ownership."
+        },
+        {
+            "question": "Which API Gateway responsibility helps prevent overloading services by limiting traffic?",
+            "choices": ["A. Request Routing", "B. Response Aggregation", "C. Rate Limiting & Throttling", "D. Load Balancing"],
+            "answer": "C",
+            "reason": "Rate Limiting & Throttling in an API Gateway prevents overloading services by controlling the amount of traffic."
+        },
+        {
+            "question": "Why is Service Discovery important in Microservices deployed in cloud environments?",
+            "choices": ["A. Static IPs are used", "B. Containers and IPs change dynamically", "C. All services use fixed hostnames", "D. Services do not communicate with each other"],
+            "answer": "B",
+            "reason": "In cloud environments, services are often deployed in containers where IPs and ports can change dynamically, making Service Discovery essential."
+        },
+        {
+            "question": "Which is NOT a core responsibility of an API Gateway?",
+            "choices": ["A. Response Aggregation", "B. Authentication & Authorization", "C. Service Discovery", "D. Load Balancing"],
+            "answer": "C",
+            "reason": "Service Discovery is typically handled by a Service Registry, not directly by the API Gateway."
+        },
+        {
+            "question": "Which is a key advantage of using gRPC over REST?",
+            "choices": ["A. Simpler to debug manually", "B. More flexible versioning", "C. Strongly typed contracts and faster communication", "D. Supports XML-based payloads"],
+            "answer": "C",
+            "reason": "gRPC provides strongly typed contracts via Protocol Buffers and enables faster, more efficient communication with HTTP/2."
+        },
+        {
+            "question": "Which gRPC feature supports real-time bidirectional communication?",
+            "choices": ["A. RESTful APIs", "B. HTTP/1.1", "C. Streaming support over HTTP/2", "D. WebSockets"],
+            "answer": "C",
+            "reason": "gRPC supports real-time bidirectional streaming over HTTP/2, enabling efficient two-way communication."
+        },
+        {
+            "question": "How does Service Discovery differ from Hardcoded Discovery?",
+            "choices": ["A. Requires manual IP entry", "B. Enables dynamic lookup of services", "C. Requires static hostnames", "D. Makes services stateful"],
+            "answer": "B",
+            "reason": "Service Discovery enables dynamic lookup of services, whereas Hardcoded Discovery requires manual configuration of IPs/hostnames."
+        },
+        {
+            "question": "How does SOA typically differ from Microservices in deployment?",
+            "choices": ["A. SOA uses in-process calls only", "B. SOA typically uses centralized middleware (ESB), Microservices prefer decentralized communication", "C. Both deploy as monoliths", "D. Microservices are stateful only"],
+            "answer": "B",
+            "reason": "SOA often uses centralized middleware like an ESB, whereas Microservices promote decentralized, independently deployable services."
+        },
+        {
+            "question": "Which is a key difference between REST and gRPC?",
+            "choices": ["A. REST supports HTTP/2 natively", "B. gRPC uses JSON by default", "C. REST is text-based (JSON/XML), gRPC uses Protocol Buffers (binary)", "D. REST supports streaming better than gRPC"],
+            "answer": "C",
+            "reason": "REST typically uses text-based payloads (JSON/XML), while gRPC uses Protocol Buffers, a compact binary format."
+        },
+        {
+            "question": "Which is an advantage of using an API Gateway?",
+            "choices": ["A. Increases service coupling", "B. Reduces service discoverability", "C. Simplifies client-service communication", "D. Eliminates need for Service Registry"],
+            "answer": "C",
+            "reason": "An API Gateway simplifies client-service communication by acting as a single entry point and handling cross-cutting concerns like routing and auth."
+        },
+        {
+            "question": "In terms of granularity, how does Component-Based Development (CBD) differ from SOA?",
+            "choices": ["A. CBD uses coarse-grained services, SOA uses fine-grained components", "B. CBD uses fine/medium-grained components, SOA uses coarse-grained services", "C. Both use only fine-grained components", "D. Both use only in-process calls"],
+            "answer": "B",
+            "reason": "CBD typically uses fine/medium-grained components, while SOA focuses on coarse-grained, reusable services."
+        },
+        {
+            "question": "Which coordination style in SOA uses a central controller to manage service interactions?",
+            "choices": ["A. Choreography", "B. API Gateway", "C. Orchestration", "D. Point-to-Point"],
+            "answer": "C",
+            "reason": "Service Orchestration in SOA uses a central controller to coordinate interactions between services."
+        },
+        {
+            "question": "How does Service Choreography differ from Orchestration?",
+            "choices": ["A. Choreography uses a central controller", "B. Choreography allows services to interact via a global interaction protocol without central control", "C. Choreography requires an API Gateway", "D. Choreography is stateful"],
+            "answer": "B",
+            "reason": "In Service Choreography, services interact according to a global protocol without relying on a central controller."
+        },
+        {
+            "question": "How does SOA typically differ from Microservices architecture?",
+            "choices": ["A. SOA has decentralized communication only", "B. SOA services are typically independently deployable", "C. SOA often uses centralized middleware (ESB), Microservices promote decentralized, independently deployable services", "D. Both require monolithic databases"],
+            "answer": "C",
+            "reason": "SOA often uses centralized middleware like an ESB, while Microservices promote decentralized, independently deployable services."
+        },
+        {
+            "question": "What is an advantage of using an API Gateway compared to having no gateway?",
+            "choices": ["A. Requires manual client-service mapping", "B. Simplifies client-service communication through a single entry point", "C. Forces clients to implement service discovery", "D. Prevents dynamic routing"],
+            "answer": "B",
+            "reason": "An API Gateway simplifies client-service communication by providing a single entry point and handling concerns like routing, auth, and monitoring."
+        },
+        {
+            "question": "How does Service Discovery differ from Hardcoded Discovery?",
+            "choices": ["A. Hardcoded Discovery uses dynamic service lookup", "B. Service Discovery allows dynamic lookup of services, Hardcoded Discovery requires manual IP/hostname configuration", "C. Both require manual IP entry", "D. Both use static DNS"],
+            "answer": "B",
+            "reason": "Service Discovery allows services to dynamically discover each other, while Hardcoded Discovery requires manually configured IPs/hostnames."
+        },
+        {
+            "question": "How does REST typically differ from gRPC?",
+            "choices": ["A. REST uses HTTP/2 by default", "B. REST uses binary Protocol Buffers", "C. REST uses HTTP/1.1 and JSON (text), gRPC uses HTTP/2 and Protocol Buffers (binary)", "D. REST supports real-time streaming better than gRPC"],
+            "answer": "C",
+            "reason": "REST typically uses HTTP/1.1 with JSON (text-based), while gRPC uses HTTP/2 with Protocol Buffers (binary), making it more efficient."
+        },
+        {
+            "question": "Which API communication style provides stronger contract enforcement?",
+            "choices": ["A. REST with OpenAPI", "B. gRPC with proto files", "C. REST with XML", "D. REST with JSON"],
+            "answer": "B",
+            "reason": "gRPC provides stronger contract enforcement through strongly typed proto files."
+        },
+        {
+            "question": "Which approach is generally faster in terms of payload and network efficiency?",
+            "choices": ["A. REST with JSON", "B. REST with XML", "C. gRPC with Protocol Buffers", "D. SOAP with XML"],
+            "answer": "C",
+            "reason": "gRPC with Protocol Buffers provides faster and more efficient payloads compared to text-based formats like JSON or XML."
+        },
+        {
+            "question": "Which architecture pattern usually favors event-driven communication and per-service databases?",
+            "choices": ["A. SOA", "B. Layered Architecture", "C. Monolithic Architecture", "D. Microservices"],
+            "answer": "D",
+            "reason": "Microservices architecture typically favors event-driven communication and per-service databases to promote loose coupling and scalability."
+        }
+    ],
+    "Lecture9: Microservices Deep Dive": [
+        {
+            "question": "What is a common challenge of communication in Microservices architectures?",
+            "choices": ["A. All services run in a single process", "B. Many network calls between services", "C. Services never change IP addresses", "D. All services use a shared database"],
+            "answer": "B",
+            "reason": "One common challenge in Microservices architectures is that many network calls occur between services, introducing complexity and potential latency."
+        },
+        {
+            "question": "What is a key benefit of using Database per Microservice?",
+            "choices": ["A. Allows all services to share a single DB", "B. Enables loose coupling and service resilience", "C. Simplifies cross-service queries", "D. Requires no data duplication"],
+            "answer": "B",
+            "reason": "Database per Microservice enables loose coupling and service resilience by ensuring each service owns its own data."
+        },
+        {
+            "question": "In Event Sourcing, how is the current state of an application determined?",
+            "choices": ["A. Using the latest snapshot only", "B. By reading a shared database", "C. By replaying a sequence of stored immutable events", "D. By using REST calls"],
+            "answer": "C",
+            "reason": "In Event Sourcing, the current state of an application is determined by replaying a sequence of stored immutable events."
+        },
+        {
+            "question": "What is a core concept of CQRS architecture?",
+            "choices": ["A. Services always use shared databases", "B. Separation of read and write models", "C. All services share the same data model", "D. Single synchronous API for all operations"],
+            "answer": "B",
+            "reason": "CQRS (Command Query Responsibility Segregation) separates the read and write models, optimizing them independently."
+        },
+        {
+            "question": "Why is 2-Phase Commit (2PC) generally not used in Microservices?",
+            "choices": ["A. It is too simple", "B. It introduces tight coupling and performance overhead", "C. It is well-suited for distributed systems", "D. It guarantees eventual consistency"],
+            "answer": "B",
+            "reason": "2PC introduces tight coupling and significant performance overhead, making it unsuitable for modern cloud-native Microservices architectures."
+        },
+        {
+            "question": "What is the purpose of the Saga Pattern in Microservices?",
+            "choices": ["A. To implement ACID transactions", "B. To coordinate distributed transactions using compensating actions", "C. To share databases across services", "D. To ensure synchronous communication"],
+            "answer": "B",
+            "reason": "The Saga Pattern coordinates distributed transactions by using local transactions with compensating actions in case of failure."
+        },
+        {
+            "question": "In a Saga Pattern, what is a characteristic of the Orchestration approach?",
+            "choices": ["A. No central controller", "B. Services react to events asynchronously", "C. A central Saga orchestrator controls the workflow", "D. All services call each other directly"],
+            "answer": "C",
+            "reason": "In the Orchestration approach, a central Saga orchestrator controls the workflow of the distributed transaction."
+        },
+        {
+            "question": "Why is Observability essential in Microservices?",
+            "choices": ["A. Services always use a single thread", "B. Services do not communicate", "C. Services communicate asynchronously and scale dynamically", "D. Logs are unnecessary"],
+            "answer": "C",
+            "reason": "Observability is essential because services in Microservices architectures communicate asynchronously and can dynamically scale, making failures difficult to trace without proper monitoring."
+        },
+        {
+            "question": "Which tool is commonly used to visualize Prometheus metrics?",
+            "choices": ["A. Elasticsearch", "B. Kibana", "C. Grafana", "D. Jaeger"],
+            "answer": "C",
+            "reason": "Grafana is a visualization tool used to display Prometheus metrics through interactive dashboards."
+        },
+        {
+            "question": "What does Spring Boot Actuator provide?",
+            "choices": ["A. Real-time messaging between services", "B. API Gateway functionality", "C. Built-in endpoints for monitoring and management", "D. Data replication across services"],
+            "answer": "C",
+            "reason": "Spring Boot Actuator provides built-in endpoints for monitoring and management of Spring Boot applications."
+        },
+        {
+            "question": "In CQRS, what does the Command model handle?",
+            "choices": ["A. Read-only operations", "B. Data replication", "C. Create, Update, Delete operations", "D. Audit trail generation"],
+            "answer": "C",
+            "reason": "In CQRS, the Command model handles Create, Update, and Delete operations (write side)."
+        },
+        {
+            "question": "What is a challenge of using CQRS?",
+            "choices": ["A. Lack of read optimization", "B. Increased complexity due to synchronization logic", "C. Tight coupling between read and write models", "D. Shared database requirement"],
+            "answer": "B",
+            "reason": "A challenge of using CQRS is increased architectural complexity due to the need for synchronization logic and eventual consistency."
+        },
+        {
+            "question": "How does Event Sourcing differ from traditional data management?",
+            "choices": ["A. Only stores latest state", "B. Stores application state changes as immutable events", "C. Uses relational database constraints", "D. Disallows event replay"],
+            "answer": "B",
+            "reason": "Event Sourcing stores application state changes as immutable events, which can be replayed to reconstruct current state."
+        },
+        {
+            "question": "What is a benefit of Event Sourcing?",
+            "choices": ["A. Simplifies the database schema", "B. Provides a full audit trail and replayable state", "C. Guarantees immediate consistency", "D. Eliminates the need for caching"],
+            "answer": "B",
+            "reason": "Event Sourcing provides a full audit trail and allows the application state to be replayed at any time."
+        },
+        {
+            "question": "In the Saga Pattern, what is a characteristic of Choreography?",
+            "choices": ["A. Central controller manages workflow", "B. Services directly invoke each other", "C. Services listen to events and react without a central controller", "D. Centralized compensation logic"],
+            "answer": "C",
+            "reason": "In Choreography, services listen to events and react to them, without the need for a central controller."
+        },
+        {
+            "question": "Which type of Saga is harder to visualize as a complete flow?",
+            "choices": ["A. Orchestration Saga", "B. Choreography Saga", "C. 2PC", "D. ACID transaction"],
+            "answer": "B",
+            "reason": "In Choreography Sagas, the event flow is harder to visualize because there is no centralized orchestration."
+        },
+        {
+            "question": "How does 2PC differ from the Saga Pattern?",
+            "choices": ["A. 2PC is optimized for cloud-native systems", "B. 2PC uses compensating transactions", "C. Saga Pattern uses compensating transactions, 2PC uses locks and a coordinator", "D. Both are the same"],
+            "answer": "C",
+            "reason": "The Saga Pattern uses compensating transactions to handle failures, while 2PC relies on distributed locks and a coordinator, which is less scalable."
+        },
+        {
+            "question": "What is the main focus of metrics in observability?",
+            "choices": ["A. Detailed request/response content", "B. Distributed tracing", "C. Performance visibility through time-series data", "D. Detailed stack traces"],
+            "answer": "C",
+            "reason": "Metrics provide performance visibility through time-series data (such as CPU usage, request counts, latency)."
+        },
+        {
+            "question": "Which observability tool type is used for Root Cause Analysis across services?",
+            "choices": ["A. Metrics", "B. Logs", "C. Traces", "D. Caching"],
+            "answer": "C",
+            "reason": "Traces are used for Root Cause Analysis across services by following the path of a single request through the system."
+        },
+        {
+            "question": "What is the difference between Logs and Metrics?",
+            "choices": ["A. Logs are time-series data, Metrics are unstructured text", "B. Logs capture detailed event information, Metrics provide aggregate time-series data", "C. Metrics capture stack traces, Logs capture numeric counters", "D. They are identical"],
+            "answer": "B",
+            "reason": "Logs capture detailed event and error information, while Metrics provide aggregate time-series data for system performance."
+        },
+        {
+            "question": "How does Event Sourcing differ from Traditional Data Management?",
+            "choices": ["A. Event Sourcing stores current state only, Traditional stores all history", "B. Event Sourcing stores state changes as events, Traditional stores current state directly", "C. Event Sourcing uses relational DB only, Traditional uses NoSQL", "D. They are identical"],
+            "answer": "B",
+            "reason": "Event Sourcing stores state changes as immutable events, while Traditional Data Management stores only the current state directly in a database."
+        },
+        {
+            "question": "What is a key benefit of Event Sourcing over Traditional Data Management?",
+            "choices": ["A. Immediate consistency", "B. Simplified read models", "C. Full audit trail and replayability", "D. Simpler architecture"],
+            "answer": "C",
+            "reason": "A key benefit of Event Sourcing is that it provides a full audit trail of state changes and allows replaying those events to reconstruct state."
+        },
+        {
+            "question": "How does CQRS differ from Traditional CRUD?",
+            "choices": ["A. CQRS uses a single model for reads and writes", "B. CQRS separates read and write models, Traditional CRUD uses a single model", "C. CQRS requires shared database access, Traditional CRUD does not", "D. They are identical"],
+            "answer": "B",
+            "reason": "CQRS separates the read and write models to optimize them independently, while Traditional CRUD uses a single unified model for both."
+        },
+        {
+            "question": "What is a key benefit of CQRS compared to Traditional CRUD?",
+            "choices": ["A. Simplified architecture", "B. Guaranteed strong consistency", "C. Optimized performance and scalability through separate models", "D. Eliminates need for caching"],
+            "answer": "C",
+            "reason": "CQRS provides optimized performance and scalability by separating the command (write) and query (read) models."
+        },
+        {
+            "question": "How does 2-Phase Commit (2PC) differ from the Saga Pattern?",
+            "choices": ["A. 2PC uses compensating transactions", "B. Saga Pattern uses compensating transactions, 2PC uses distributed locks and coordination", "C. Both ensure immediate consistency", "D. Both are fully cloud-native"],
+            "answer": "B",
+            "reason": "The Saga Pattern ensures eventual consistency using compensating transactions, whereas 2PC uses distributed locks and a coordinator, which is less scalable."
+        },
+        {
+            "question": "Which approach is more suitable for cloud-native, scalable Microservices?",
+            "choices": ["A. 2PC", "B. Traditional ACID transactions", "C. Saga Pattern", "D. Synchronous 2PC"],
+            "answer": "C",
+            "reason": "The Saga Pattern is more suitable for cloud-native Microservices because it avoids distributed locks and allows eventual consistency through local transactions."
+        },
+        {
+            "question": "In Saga Patterns, how does Orchestration differ from Choreography?",
+            "choices": ["A. Orchestration is fully decentralized", "B. Choreography uses a central orchestrator", "C. Orchestration uses a central controller to manage the workflow, Choreography does not", "D. Both are fully centralized"],
+            "answer": "C",
+            "reason": "Orchestration uses a central controller to manage the Saga workflow, while Choreography is decentralized and driven by events."
+        },
+        {
+            "question": "What is a key drawback of Choreography Saga compared to Orchestration?",
+            "choices": ["A. Tight coupling between services", "B. Harder to visualize complete flow", "C. Requires central controller", "D. Guarantees immediate consistency"],
+            "answer": "B",
+            "reason": "A key drawback of Choreography Sagas is that the flow becomes harder to visualize as there is no centralized orchestration."
+        },
+        {
+            "question": "What is the primary focus of Metrics in observability?",
+            "choices": ["A. Detailed error stack traces", "B. Tracing the full path of a request", "C. Aggregate time-series performance data", "D. Detailed HTTP request payloads"],
+            "answer": "C",
+            "reason": "Metrics focus on providing aggregate time-series performance data, such as latency, error rates, CPU usage, etc."
+        },
+        {
+            "question": "How do Logs differ from Traces in observability?",
+            "choices": ["A. Logs capture request paths, Traces capture time-series data", "B. Logs capture detailed event and error information, Traces follow the flow of a request across services", "C. Both capture time-series metrics", "D. Both are used for real-time dashboards only"],
+            "answer": "B",
+            "reason": "Logs capture detailed event and error information for a system, while Traces follow the flow of a request across multiple services."
+        }
+    ],
+    "Lecture10: Component Testing & Validation": [
+        {
+            "question": "What fundamental principle explains why testing can never prove a program is bug-free?",
+            "choices": ["A. Turing’s Halting Problem", "B. Moore’s Law", "C. The CAP Theorem", "D. The Law of Demeter"],
+            "answer": "A",
+            "reason": "Turing’s Halting Problem shows that it is impossible to prove via testing that a program is completely bug-free — testing can only show the presence of bugs, not their absence."
+        },
+        {
+            "question": "What is the primary goal of Unit Testing?",
+            "choices": ["A. Test full application flow", "B. Test external APIs", "C. Test individual units in isolation", "D. Test component clusters"],
+            "answer": "C",
+            "reason": "The primary goal of Unit Testing is to test individual units (methods, classes) in isolation."
+        },
+        {
+            "question": "Which of the following is a best practice for Unit Testing?",
+            "choices": ["A. Share test state across tests", "B. Avoid mocking external dependencies", "C. Test one unit at a time", "D. Skip edge cases to focus on core paths"],
+            "answer": "C",
+            "reason": "A best practice in Unit Testing is to test one unit at a time and mock external dependencies to ensure isolation."
+        },
+        {
+            "question": "What is Component Testing primarily used to validate?",
+            "choices": ["A. Individual algorithms only", "B. The internal logic of a single method", "C. Functional correctness of a component and its interfaces", "D. End-to-end user flows"],
+            "answer": "C",
+            "reason": "Component Testing validates the functional correctness of a component and its exposed interfaces."
+        },
+        {
+            "question": "How does Component Testing differ from Unit Testing?",
+            "choices": ["A. Component Testing uses only mocks", "B. Component Testing tests individual units", "C. Component Testing tests integrated units as a single component", "D. They are the same"],
+            "answer": "C",
+            "reason": "Component Testing tests integrated units as a single component, focusing on their interactions and exposed behavior."
+        },
+        {
+            "question": "What is the purpose of using Mockito in testing?",
+            "choices": ["A. To test user interfaces", "B. To mock and simulate the behavior of real objects", "C. To perform end-to-end tests", "D. To generate test data automatically"],
+            "answer": "B",
+            "reason": "Mockito is used to mock and simulate the behavior of real objects during tests to isolate the logic under test."
+        },
+        {
+            "question": "Which type of testing focuses on verifying interactions between modules?",
+            "choices": ["A. Unit Testing", "B. Component Testing", "C. Integration Testing", "D. Manual Testing"],
+            "answer": "C",
+            "reason": "Integration Testing focuses on verifying the correctness of interactions between modules after they are combined."
+        },
+        {
+            "question": "In Integration Testing, what is a best practice?",
+            "choices": ["A. Test internal logic of components", "B. Use only mocks for all dependencies", "C. Simulate real user interactions and failure scenarios", "D. Skip HTTP calls"],
+            "answer": "C",
+            "reason": "A best practice for Integration Testing is to simulate real user interactions and include failure scenarios to validate cross-component workflows."
+        },
+        {
+            "question": "What is the purpose of End-to-End (E2E) Testing?",
+            "choices": ["A. Test individual units in isolation", "B. Verify full application flow from user input to output", "C. Test internal data models", "D. Only test backend APIs"],
+            "answer": "B",
+            "reason": "End-to-End Testing verifies the full application flow from user input through backend services to final output."
+        },
+        {
+            "question": "Which type of testing is most useful for visual and UX validation?",
+            "choices": ["A. Unit Testing", "B. Integration Testing", "C. Manual Testing", "D. Performance Testing"],
+            "answer": "C",
+            "reason": "Manual Testing is most useful for visual and UX validation, exploratory testing, and complex scenarios requiring human judgment."
+        },
+        {
+            "question": "Which type of Performance Testing checks how the system performs under expected load?",
+            "choices": ["A. Spike Testing", "B. Stress Testing", "C. Load Testing", "D. Endurance Testing"],
+            "answer": "C",
+            "reason": "Load Testing checks how the system performs under expected, normal load conditions."
+        },
+        {
+            "question": "Which Performance Testing type tests the system's stability under a long, constant load?",
+            "choices": ["A. Spike Testing", "B. Endurance Testing", "C. Load Testing", "D. Stress Testing"],
+            "answer": "B",
+            "reason": "Endurance Testing (also called Soak Testing) checks the system’s stability and resource usage under a long, constant load."
+        },
+        {
+            "question": "Which testing type focuses on testing a single component’s correctness and its interfaces?",
+            "choices": ["A. Unit Testing", "B. Integration Testing", "C. Component Testing", "D. Performance Testing"],
+            "answer": "C",
+            "reason": "Component Testing tests the correctness of a single component, focusing on its internal behavior and interfaces."
+        },
+        {
+            "question": "How does Integration Testing differ from Component Testing?",
+            "choices": ["A. Integration Testing tests individual units", "B. Integration Testing verifies interactions between multiple components or systems", "C. Integration Testing mocks all dependencies", "D. They are identical"],
+            "answer": "B",
+            "reason": "Integration Testing verifies interactions between multiple components or systems and their data flow."
+        },
+        {
+            "question": "How does E2E Testing differ from Integration Testing?",
+            "choices": ["A. E2E Testing verifies full application flow from user input to output", "B. E2E Testing tests individual units", "C. E2E Testing uses only mocked services", "D. They are the same"],
+            "answer": "A",
+            "reason": "E2E Testing verifies the full application flow from user input through the backend and output, simulating real user behavior."
+        },
+        {
+            "question": "How does Manual Testing differ from Automated Testing?",
+            "choices": ["A. Manual Testing runs test cases automatically", "B. Automated Testing requires human observation", "C. Manual Testing involves manual execution by testers", "D. They are identical"],
+            "answer": "C",
+            "reason": "Manual Testing involves manual execution of test cases by human testers, while Automated Testing runs test cases automatically through scripts."
+        },
+        {
+            "question": "Which type of Performance Testing helps determine system behavior during sudden large changes in load?",
+            "choices": ["A. Spike Testing", "B. Load Testing", "C. Stress Testing", "D. Volume Testing"],
+            "answer": "A",
+            "reason": "Spike Testing helps determine how a system behaves when sudden large changes in load occur."
+        },
+        {
+            "question": "Which tool is specifically designed for Performance Testing of Web apps and APIs?",
+            "choices": ["A. Mockito", "B. Selenium", "C. Apache JMeter", "D. JUnit"],
+            "answer": "C",
+            "reason": "Apache JMeter is a popular tool specifically designed for Performance Testing of web applications, APIs, and databases."
+        },
+        {
+            "question": "What is a common downside of E2E Testing?",
+            "choices": ["A. It cannot simulate real user behavior", "B. It is too fast and efficient", "C. It is brittle and UI changes can easily break tests", "D. It replaces the need for Unit Testing"],
+            "answer": "C",
+            "reason": "A common downside of E2E Testing is that it can be brittle—small UI changes can easily break tests."
+        },
+        {
+            "question": "How does Load Testing differ from Stress Testing?",
+            "choices": ["A. Load Testing checks performance under expected load, Stress Testing tests beyond expected limits", "B. Load Testing is only manual", "C. Stress Testing is used only in development", "D. They are identical"],
+            "answer": "A",
+            "reason": "Load Testing checks performance under expected load, while Stress Testing pushes the system beyond expected load to find breaking points."
+        },
+        {
+            "question": "How does Unit Testing differ from Component Testing?",
+            "choices": ["A. Unit Testing tests a component’s full functionality", "B. Component Testing tests individual units in isolation", "C. Unit Testing tests individual units, Component Testing tests integrated units as a single component", "D. They are identical"],
+            "answer": "C",
+            "reason": "Unit Testing focuses on individual units in isolation, whereas Component Testing validates integrated units as a single component."
+        },
+        {
+            "question": "How does Component Testing differ from Integration Testing?",
+            "choices": ["A. Component Testing validates interactions between multiple systems", "B. Component Testing focuses on a single component with controlled dependencies", "C. Integration Testing uses mocks for all dependencies", "D. They are the same"],
+            "answer": "B",
+            "reason": "Component Testing focuses on validating a single component with controlled dependencies, while Integration Testing verifies interactions between multiple components or systems."
+        },
+        {
+            "question": "How does E2E Testing differ from Integration Testing?",
+            "choices": ["A. E2E Testing verifies full application flow from user input to output", "B. Integration Testing is fully manual", "C. E2E Testing tests only APIs", "D. Integration Testing is not needed when E2E Testing is done"],
+            "answer": "A",
+            "reason": "E2E Testing verifies the full application flow from user input to final output, including all system layers."
+        },
+        {
+            "question": "How does Manual Testing differ from Automated Testing?",
+            "choices": ["A. Manual Testing uses automated scripts", "B. Automated Testing is executed by human testers", "C. Manual Testing involves manual execution by testers, Automated Testing runs scripts automatically", "D. Both are executed manually"],
+            "answer": "C",
+            "reason": "Manual Testing involves manual execution by testers, whereas Automated Testing runs scripts automatically to validate software behavior."
+        },
+        {
+            "question": "What is the focus of Load Testing?",
+            "choices": ["A. Testing system behavior under sudden load spikes", "B. Testing system under expected, normal load", "C. Testing for long-term endurance", "D. Testing system under minimal load"],
+            "answer": "B",
+            "reason": "Load Testing focuses on verifying the system’s performance under expected, normal load."
+        },
+        {
+            "question": "What is the focus of Stress Testing?",
+            "choices": ["A. Testing system under expected load", "B. Testing system with sudden load changes", "C. Testing system behavior beyond expected load limits", "D. Testing for UI/UX correctness"],
+            "answer": "C",
+            "reason": "Stress Testing focuses on testing the system’s behavior when pushed beyond its expected load limits."
+        },
+        {
+            "question": "What is the focus of Spike Testing?",
+            "choices": ["A. Testing behavior under sustained high load", "B. Testing with a sudden increase/decrease in load", "C. Testing under expected load", "D. Testing after code refactoring"],
+            "answer": "B",
+            "reason": "Spike Testing focuses on testing the system’s behavior under sudden increases and decreases in load."
+        },
+        {
+            "question": "Which Performance Testing tool is best known for web apps, APIs, and database testing?",
+            "choices": ["A. Mockito", "B. Apache JMeter", "C. Selenium", "D. JUnit"],
+            "answer": "B",
+            "reason": "Apache JMeter is widely used for Performance Testing of web apps, APIs, and databases."
+        },
+        {
+            "question": "Which Performance Testing tool is known for being highly programmable and Python-based?",
+            "choices": ["A. Locust", "B. k6", "C. Selenium", "D. TestCafe"],
+            "answer": "A",
+            "reason": "Locust is a programmable, Python-based Performance Testing tool used for load and scalability testing."
+        },
+        {
+            "question": "Which Performance Testing tool is best suited for high concurrency and CI-friendly testing?",
+            "choices": ["A. Gatling", "B. Apache JMeter", "C. Blazemeter", "D. Selenium"],
+            "answer": "A",
+            "reason": "Gatling is a Performance Testing tool known for its high concurrency support and CI-friendly architecture."
+        }
+    ],
+    "Likely-Exam Questions": [
+        {
+            "question": "In CBSE, what does a Component Adapter do?",
+            "choices": ["A. Provides services to a component", "B. Registers components in a repository", "C. Bridges incompatible component interfaces", "D. Loads components dynamically"],
+            "answer": "C",
+            "reason": "A Component Adapter bridges incompatible component interfaces so that components can work together despite interface mismatches."
+        },
+        {
+            "question": "Which key principle is used to achieve loose coupling in Component-Based Software Engineering?",
+            "choices": ["A. Static linking", "B. Centralized state management", "C. Dependency Injection", "D. Global variables"],
+            "answer": "C",
+            "reason": "Dependency Injection (DI) achieves loose coupling by allowing components to depend on interfaces rather than concrete implementations."
+        },
+        {
+            "question": "How does a Microservices architecture typically differ from SOA?",
+            "choices": ["A. Microservices use central orchestration", "B. Microservices are stateful by default", "C. Microservices favor decentralized, independently deployable services", "D. SOA uses stateless services exclusively"],
+            "answer": "C",
+            "reason": "Microservices favor decentralized, independently deployable services, while SOA often uses centralized orchestration and can be more heavyweight."
+        },
+        {
+            "question": "What is the main benefit of using Event Sourcing in Microservices?",
+            "choices": ["A. Shared database between services", "B. Immediate consistency", "C. Full audit trail and ability to replay state", "D. Simplified architecture"],
+            "answer": "C",
+            "reason": "Event Sourcing stores immutable events, providing a full audit trail and the ability to rebuild current state by replaying events."
+        },
+        {
+            "question": "In the Saga Pattern, which approach uses a central controller to manage transaction flow?",
+            "choices": ["A. Choreography", "B. Orchestration", "C. Whiteboard Pattern", "D. Service Locator Pattern"],
+            "answer": "B",
+            "reason": "Orchestration uses a central controller (Saga orchestrator) to manage the flow of distributed transactions."
+        },
+        {
+            "question": "Which observability tool stack is primarily used for collecting and visualizing time-series metrics?",
+            "choices": ["A. ELK Stack", "B. Prometheus + Grafana", "C. Jaeger", "D. WireMock"],
+            "answer": "B",
+            "reason": "Prometheus collects time-series metrics, and Grafana visualizes them via interactive dashboards."
+        },
+        {
+            "question": "What is a primary characteristic of RESTful APIs?",
+            "choices": ["A. Stateful server architecture", "B. Tight client-server coupling", "C. Stateless communication", "D. Requires gRPC for communication"],
+            "answer": "C",
+            "reason": "RESTful APIs are based on stateless communication, meaning each request contains all necessary information and the server does not retain client state."
+        },
+        {
+            "question": "How does Component Testing differ from Integration Testing?",
+            "choices": ["A. Component Testing verifies full application flow", "B. Component Testing tests one component with controlled dependencies, Integration Testing verifies interactions between components", "C. Component Testing uses real services only", "D. They are identical"],
+            "answer": "B",
+            "reason": "Component Testing focuses on testing one component with controlled dependencies, while Integration Testing verifies interactions between components or systems."
+        },
+        {
+            "question": "Which type of Performance Testing tests system behavior under a long, constant load?",
+            "choices": ["A. Spike Testing", "B. Endurance Testing", "C. Stress Testing", "D. Load Testing"],
+            "answer": "B",
+            "reason": "Endurance Testing (also called Soak Testing) evaluates how a system performs under a sustained, constant load for an extended period."
+        },
+        {
+            "question": "What is a key difference between REST and gRPC?",
+            "choices": ["A. REST uses HTTP/2 by default", "B. gRPC uses JSON payloads", "C. REST is text-based (JSON/XML), gRPC uses binary Protocol Buffers", "D. REST requires centralized orchestration"],
+            "answer": "C",
+            "reason": "REST typically uses text-based formats such as JSON or XML, while gRPC uses binary Protocol Buffers for more efficient communication."
+        },
+        {
+            "question": "How does the Liskov Substitution Principle (LSP) affect software design?",
+            "choices": ["A. Subclasses must be implemented as abstract classes", "B. Subclasses must be interchangeable with their superclass without affecting correctness", "C. Subclasses must override all superclass methods", "D. Subclasses must throw new exceptions"],
+            "answer": "B",
+            "reason": "LSP states that subclasses must be usable interchangeably with their superclass, ensuring behavioral consistency."
+        },
+        {
+            "question": "How does the Decorator Pattern add behavior to objects?",
+            "choices": ["A. By modifying the base class directly", "B. By inheritance only", "C. By adding behavior at runtime using composition", "D. By adding methods through AspectJ"],
+            "answer": "C",
+            "reason": "The Decorator Pattern adds behavior to objects at runtime through composition, not inheritance."
+        },
+        {
+            "question": "What is the role of the Service Locator Pattern?",
+            "choices": ["A. To manage application security", "B. To act as a central registry for discovering services", "C. To perform database transactions", "D. To validate service contracts"],
+            "answer": "B",
+            "reason": "The Service Locator Pattern provides a central registry where services can be registered and discovered at runtime."
+        },
+        {
+            "question": "How does Java Platform Module System (JPMS) improve dependency management?",
+            "choices": ["A. By enforcing dynamic service discovery", "B. By allowing multiple versions of the same class", "C. By providing strong encapsulation and compile-time dependency checking", "D. By eliminating the need for ServiceLoader"],
+            "answer": "C",
+            "reason": "JPMS provides strong encapsulation and enables compile-time dependency checking, solving issues like classpath hell."
+        },
+        {
+            "question": "What is a key benefit of using a Multi-Module Maven Project?",
+            "choices": ["A. Enforces monolithic builds", "B. Simplifies database schema management", "C. Encapsulates reusable components for efficient builds and dependency management", "D. Forces static linking"],
+            "answer": "C",
+            "reason": "Multi-Module Maven Projects encapsulate reusable components and provide efficient build and dependency management."
+        },
+        {
+            "question": "How does an API Gateway benefit Microservices architecture?",
+            "choices": ["A. Allows services to discover each other", "B. Acts as a single entry point and manages cross-cutting concerns", "C. Forces synchronous communication", "D. Adds extra latency to all calls"],
+            "answer": "B",
+            "reason": "An API Gateway acts as a single entry point for clients and handles cross-cutting concerns such as authentication, rate limiting, and request routing."
+        },
+        {
+            "question": "How does Service Discovery improve Microservices scalability?",
+            "choices": ["A. By forcing services to be stateful", "B. By allowing services to dynamically locate each other without hardcoded configurations", "C. By using static IP addresses", "D. By eliminating API Gateway requirements"],
+            "answer": "B",
+            "reason": "Service Discovery allows services to dynamically locate each other without hardcoded configurations, which is essential in scalable, dynamic environments like the cloud."
+        },
+        {
+            "question": "How does Layered Architecture differ from Event-Driven Architecture (EDA)?",
+            "choices": ["A. Layered uses asynchronous events, EDA uses synchronous calls", "B. Layered is synchronous and tightly coupled, EDA is asynchronous and loosely coupled", "C. Both use stateless services only", "D. EDA requires SOAP for communication"],
+            "answer": "B",
+            "reason": "Layered Architecture typically uses synchronous calls and has tighter coupling, while EDA relies on asynchronous events and achieves loose coupling."
+        },
+        {
+            "question": "How does 2-Phase Commit (2PC) differ from the Saga Pattern?",
+            "choices": ["A. 2PC uses compensating transactions, Saga Pattern uses global locks", "B. 2PC requires distributed locks and coordination, Saga Pattern uses local transactions with compensating actions", "C. Both use centralized orchestrators", "D. Both guarantee strong consistency"],
+            "answer": "B",
+            "reason": "2PC requires distributed locks and a coordinator, which introduces tight coupling and poor scalability, whereas the Saga Pattern uses local transactions with compensating actions and fits cloud-native architecture better."
+        },
+        {
+            "question": "How does Automated Testing differ from Manual Testing?",
+            "choices": ["A. Automated Testing is performed manually by testers", "B. Automated Testing runs predefined scripts, Manual Testing involves human testers executing test cases", "C. Automated Testing cannot be used in CI/CD pipelines", "D. Manual Testing is faster for regression suites"],
+            "answer": "B",
+            "reason": "Automated Testing runs predefined test scripts automatically, whereas Manual Testing involves human testers executing test cases manually."
+        },
+        {
+            "question": "Where does Mockito add value in Unit and Component Testing?",
+            "choices": ["A. It provides UI automation", "B. It mocks and simulates external dependencies", "C. It monitors network latency", "D. It acts as a distributed tracing tool"],
+            "answer": "B",
+            "reason": "Mockito is a Java mocking framework that allows you to simulate external dependencies to isolate the logic under test."
+        },
+        {
+            "question": "In Aspect-Oriented Programming (AOP), what does an Aspect represent?",
+            "choices": ["A. The base application logic", "B. A method argument", "C. An encapsulated cross-cutting concern", "D. A database transaction"],
+            "answer": "C",
+            "reason": "An Aspect in AOP represents an encapsulated cross-cutting concern such as logging, security, or transaction management."
+        },
+        {
+            "question": "How does Layered Architecture differ from Component-Based Architecture?",
+            "choices": ["A. Layered Architecture focuses on physical packaging, Component-Based focuses on logical layers", "B. Layered Architecture maps logical layers, Component-Based uses loosely coupled physical components", "C. Both use tight coupling", "D. Component-Based does not use DI"],
+            "answer": "B",
+            "reason": "Layered Architecture maps logical layers, while Component-Based Architecture implements loosely coupled physical components that can be independently deployed."
+        },
+        {
+            "question": "How does Component-Based Development (CBD) differ from SOA?",
+            "choices": ["A. CBD uses distributed services by default", "B. CBD uses coarse-grained services only", "C. CBD uses fine/medium-grained components and local deployment, SOA uses coarse-grained distributed services", "D. Both rely on REST APIs exclusively"],
+            "answer": "C",
+            "reason": "CBD focuses on fine/medium-grained components with local deployment, while SOA implements coarse-grained services distributed across a network."
+        },
+        {
+            "question": "How does Orchestration differ from Choreography in a Saga Pattern?",
+            "choices": ["A. Orchestration has no central controller", "B. Choreography is controlled centrally", "C. Orchestration uses a central controller to manage flow, Choreography is decentralized with event-based flow", "D. Both use distributed locks"],
+            "answer": "C",
+            "reason": "Orchestration uses a central controller to manage Saga workflow, while Choreography is decentralized and relies on services reacting to events."
+        },
+        {
+            "question": "How does CQRS differ from Traditional CRUD?",
+            "choices": ["A. CQRS uses a shared data model", "B. CQRS separates command (write) and query (read) models, Traditional CRUD uses a single model", "C. CRUD guarantees eventual consistency", "D. CQRS eliminates the need for read operations"],
+            "answer": "B",
+            "reason": "CQRS separates the command (write) and query (read) models for better scalability and performance, whereas Traditional CRUD uses a single unified model."
+        },
+        {
+            "question": "What is a characteristic of Black-Box Component Composition?",
+            "choices": ["A. The component’s internal logic is visible", "B. The component’s internal logic is hidden, interaction happens via public interfaces", "C. Component is tightly coupled", "D. Component must share its source code"],
+            "answer": "B",
+            "reason": "In Black-Box Component Composition, internal logic is hidden, and components interact only via well-defined public interfaces."
+        },
+        {
+            "question": "What is one key Componentization Rule in CBSE?",
+            "choices": ["A. Expose internal classes directly", "B. Group business functionality into reusable components and expose it via interfaces", "C. Share global variables between components", "D. Always use static composition"],
+            "answer": "B",
+            "reason": "A core Componentization Rule is to group business functionality into reusable components and expose it through clean interfaces."
+        },
+        {
+            "question": "Which REST principle ensures that the server does not store any client session state?",
+            "choices": ["A. Client-server separation", "B. Statelessness", "C. Uniform Interface", "D. Cacheability"],
+            "answer": "B",
+            "reason": "Statelessness is a REST principle that requires the server not to store any client session state between requests — each request must contain all necessary context."
+        },
+        {
+            "question": "Which REST principle allows clients to improve performance by reusing responses?",
+            "choices": ["A. Client-server separation", "B. Statelessness", "C. Cacheability", "D. Uniform Interface"],
+            "answer": "C",
+            "reason": "Cacheability allows clients to reuse server responses when appropriate, improving performance and reducing server load."
+        },
+        {
+            "question": "In the Testing Pyramid, what is the role of Unit Testing?",
+            "choices": ["A. Tests full application flow", "B. Tests interaction between modules", "C. Tests individual units in isolation", "D. Tests UX and visual aspects"],
+            "answer": "C",
+            "reason": "Unit Testing focuses on testing individual units (such as methods or classes) in complete isolation from other parts of the system."
+        },
+        {
+            "question": "How does Component Testing differ from Integration Testing?",
+            "choices": ["A. Component Testing validates full application flow", "B. Component Testing tests a single component in isolation or with controlled dependencies, Integration Testing verifies interaction between multiple components", "C. Component Testing requires full database integration", "D. Both are identical"],
+            "answer": "B",
+            "reason": "Component Testing tests a single component (including multiple units) with controlled dependencies, while Integration Testing validates how multiple components or modules interact."
+        },
+        {
+            "question": "Which type of Performance Testing is used to test system behavior under sudden load increases or decreases?",
+            "choices": ["A. Load Testing", "B. Stress Testing", "C. Spike Testing", "D. Endurance Testing"],
+            "answer": "C",
+            "reason": "Spike Testing evaluates how the system behaves when there are sudden large increases or decreases in load."
+        },
+        {
+            "question": "How does a Component Model differ from a Component Framework?",
+            "choices": ["A. Component Model manages runtime, Component Framework defines structure only", "B. Component Model defines structure, behavior, and interactions, Component Framework provides runtime support and lifecycle management", "C. They are the same", "D. Component Framework only manages versioning"],
+            "answer": "B",
+            "reason": "A Component Model defines structure, behavior, and interaction standards for components, while a Component Framework provides runtime support and manages component lifecycle and interactions."
+        },
+        {
+            "question": "How does Dependency Injection differ from Service Locator?",
+            "choices": ["A. Dependency Injection requires global variables", "B. Service Locator requires compile-time wiring", "C. Dependency Injection provides dependencies externally at runtime, Service Locator lets components look them up at runtime", "D. Both require JPMS modules"],
+            "answer": "C",
+            "reason": "Dependency Injection (DI) provides dependencies externally at runtime, while Service Locator allows components to look up required services at runtime."
+        },
+        {
+            "question": "How does the Whiteboard Pattern differ from DI and Service Locator?",
+            "choices": ["A. Whiteboard uses global variables", "B. Whiteboard publishes and consumes services dynamically with full decoupling, DI and Service Locator are more static", "C. Whiteboard is synchronous only", "D. Whiteboard forces inheritance"],
+            "answer": "B",
+            "reason": "The Whiteboard Pattern enables dynamic publishing and consumption of services, achieving high decoupling — DI and Service Locator tend to be more static in wiring."
+        },
+        {
+            "question": "How does a Module differ from a Component?",
+            "choices": ["A. Module focuses on physical behavior only", "B. Module organizes code and dependencies, Component focuses on behavior and functionality", "C. Module must always be stateful", "D. Component requires static composition"],
+            "answer": "B",
+            "reason": "A Module organizes code and manages dependencies (e.g. JPMS modules), while a Component focuses on encapsulating behavior and functionality that can be reused and deployed independently."
+        },
+        {
+            "question": "How does using an API Gateway benefit client-service communication?",
+            "choices": ["A. Requires clients to know all service endpoints", "B. Simplifies client interaction with services by providing a single entry point and handling cross-cutting concerns", "C. Forces all calls to go through synchronous REST", "D. Replaces the need for Service Discovery"],
+            "answer": "B",
+            "reason": "An API Gateway simplifies client-service communication by acting as a single entry point and managing concerns such as routing, authentication, rate limiting, and aggregation."
+        },
+        {
+            "question": "How does Service Discovery differ from hardcoded service endpoints?",
+            "choices": ["A. Hardcoded endpoints enable dynamic service lookup", "B. Service Discovery allows services to dynamically find each other, while hardcoded endpoints require manual configuration", "C. Both require Service Locator", "D. Both are static"],
+            "answer": "B",
+            "reason": "Service Discovery allows services to dynamically locate each other without relying on manually hardcoded IPs or hostnames."
+        },
+        {
+            "question": "In Observability, what is the primary role of Traces?",
+            "choices": ["A. Show CPU utilization trends", "B. Capture system logs", "C. Capture distributed flow of a request across multiple services", "D. Track memory usage"],
+            "answer": "C",
+            "reason": "Traces capture the distributed flow of a single request across multiple services, enabling root cause analysis and understanding of complex service interactions."
+        },
+        {
+            "question": "In Component Composition, what is a characteristic of White-Box Composition?",
+            "choices": ["A. The internal logic of the component is hidden", "B. The internal logic is visible and modifiable", "C. Components communicate only via events", "D. The component must be deployed as a black box"],
+            "answer": "B",
+            "reason": "White-Box Composition allows internal logic to be visible and modifiable, making it flexible but reducing encapsulation."
+        },
+        {
+            "question": "How does Static Component Composition differ from Dynamic Component Composition?",
+            "choices": ["A. Static composition happens at runtime", "B. Static composition requires DI", "C. Static composition happens at compile-time or build-time, Dynamic composition happens at runtime", "D. They are identical"],
+            "answer": "C",
+            "reason": "Static Component Composition happens at compile-time or build-time, while Dynamic Component Composition happens at runtime using mechanisms like DI or plugin loading."
+        },
+        {
+            "question": "What is a key principle of the Liskov Substitution Principle (LSP)?",
+            "choices": ["A. Subclasses must be abstract", "B. Subclasses must behave consistently with their superclass", "C. Subclasses must expose private methods", "D. Subclasses must add new required parameters"],
+            "answer": "B",
+            "reason": "LSP requires that subclasses behave consistently with their superclass, allowing them to be used interchangeably without breaking correctness."
+        },
+        {
+            "question": "How does the Decorator Pattern add functionality to objects?",
+            "choices": ["A. Through inheritance only", "B. By wrapping objects at runtime using composition", "C. By adding new static methods", "D. By overriding base class methods directly"],
+            "answer": "B",
+            "reason": "The Decorator Pattern adds functionality to objects by wrapping them at runtime using composition, allowing flexible behavior extension."
+        },
+        {
+            "question": "In Event-Driven Architecture (EDA), how does the Mediator topology operate?",
+            "choices": ["A. Fully decentralized with no central component", "B. Uses a central event orchestrator to manage event flow", "C. Forces all services to communicate synchronously", "D. Avoids any use of event queues"],
+            "answer": "B",
+            "reason": "The Mediator topology uses a central event orchestrator that manages the flow of events between producers and consumers."
+        },
+        {
+            "question": "What is a key challenge of implementing CQRS?",
+            "choices": ["A. Strong consistency is guaranteed", "B. Eventual consistency and sync logic complexity", "C. All services must share a database", "D. Read model and write model must be identical"],
+            "answer": "B",
+            "reason": "A key challenge of implementing CQRS is handling eventual consistency between the read and write models, and managing synchronization logic."
+        },
+        {
+            "question": "What is a tradeoff of Event Sourcing?",
+            "choices": ["A. Simplifies architecture significantly", "B. Provides immediate consistency always", "C. Introduces complexity in event versioning and separate read models", "D. Eliminates the need for messaging systems"],
+            "answer": "C",
+            "reason": "Event Sourcing introduces complexity in versioning events and maintaining separate read models to support different query requirements."
+        },
+        {
+            "question": "In the Saga Pattern, what is an advantage of the Choreography approach?",
+            "choices": ["A. Centralized workflow is enforced", "B. No central controller; services are loosely coupled via events", "C. All services must implement compensation logic centrally", "D. It uses distributed locks"],
+            "answer": "B",
+            "reason": "In Choreography, there is no central controller — services are loosely coupled and react to events, improving decoupling and flexibility."
+        },
+        {
+            "question": "How does Manual Testing differ from Automated Testing?",
+            "choices": ["A. Manual Testing requires no human involvement", "B. Automated Testing runs predefined test scripts, Manual Testing is executed manually by testers", "C. Automated Testing cannot be used in CI/CD", "D. Manual Testing is faster for large regression suites"],
+            "answer": "B",
+            "reason": "Manual Testing is executed manually by testers, while Automated Testing runs predefined test scripts automatically."
+        },
+        {
+            "question": "How does gRPC differ from REST regarding contract enforcement?",
+            "choices": ["A. REST has stronger contract enforcement", "B. gRPC uses strongly-typed proto files, REST uses less strict OpenAPI definitions", "C. Both rely on Protocol Buffers", "D. REST uses binary protocols only"],
+            "answer": "B",
+            "reason": "gRPC enforces contracts through strongly-typed proto files, while REST APIs often rely on less strict OpenAPI specifications or documentation."
+        },
+        {
+            "question": "How does Black-Box Component Composition improve maintainability?",
+            "choices": ["A. By exposing internal state of components", "B. By allowing direct modification of internal logic", "C. By enforcing interaction only via well-defined public interfaces", "D. By coupling components more tightly"],
+            "answer": "C",
+            "reason": "Black-Box Component Composition improves maintainability by ensuring components interact only through public interfaces, keeping internal logic hidden and changeable without affecting others."
+        },
+        {
+            "question": "How does Dependency Depth impact coupling in Component-Based Systems?",
+            "choices": ["A. Higher depth reduces coupling", "B. Higher depth increases coupling and reduces flexibility", "C. Dependency Depth is not related to coupling", "D. Lower depth always leads to tight coupling"],
+            "answer": "B",
+            "reason": "Higher Dependency Depth increases coupling and makes the system harder to maintain and test, reducing flexibility."
+        },
+        {
+            "question": "How does DI help prevent tight coupling?",
+            "choices": ["A. By using global variables", "B. By injecting concrete classes directly", "C. By injecting interfaces and letting the framework provide implementations", "D. By forcing compile-time binding"],
+            "answer": "C",
+            "reason": "DI prevents tight coupling by injecting interfaces, allowing implementations to be swapped externally without affecting the consumer code."
+        },
+        {
+            "question": "In EDA, when would you prefer using Broker topology over Mediator?",
+            "choices": ["A. When a centralized controller is required", "B. When maximum decoupling and dynamic event flow is desired", "C. When services must be invoked synchronously", "D. When orchestration must be centralized"],
+            "answer": "B",
+            "reason": "Broker topology allows maximum decoupling and dynamic event flow — services publish and subscribe without a central controller."
+        },
+        {
+            "question": "Why is Database per Microservice considered a key principle?",
+            "choices": ["A. It ensures global ACID transactions", "B. It forces all services to share data", "C. It ensures data ownership and isolation, enabling service autonomy", "D. It simplifies cross-service queries"],
+            "answer": "C",
+            "reason": "Database per Microservice ensures that each service owns and manages its own data, promoting autonomy and reducing coupling."
+        },
+        {
+            "question": "What is a key tradeoff of having Database per Microservice?",
+            "choices": ["A. Simplifies complex queries", "B. No need for event-driven communication", "C. Makes cross-service queries and consistency harder", "D. Guarantees immediate global consistency"],
+            "answer": "C",
+            "reason": "A tradeoff of Database per Microservice is that cross-service queries become harder and consistency must often be handled through eventual consistency patterns."
+        },
+        {
+            "question": "In JPMS, what is the purpose of the 'requires' directive?",
+            "choices": ["A. To declare which services the module provides", "B. To declare which modules this module depends on", "C. To specify public classes", "D. To manage DI injection"],
+            "answer": "B",
+            "reason": "In JPMS, the 'requires' directive declares which other modules this module depends on at compile time."
+        },
+        {
+            "question": "Why is gRPC often preferred over REST for high-performance internal Microservices communication?",
+            "choices": ["A. gRPC uses JSON payloads", "B. REST uses HTTP/2 by default", "C. gRPC uses HTTP/2 + binary Protocol Buffers, offering lower latency and more efficient communication", "D. REST supports built-in streaming"],
+            "answer": "C",
+            "reason": "gRPC uses HTTP/2 and binary Protocol Buffers, enabling lower latency and more efficient internal Microservices communication compared to REST with JSON."
+        },
+        {
+            "question": "What is the main goal of Componentization in CBSE?",
+            "choices": ["A. Increase tight coupling", "B. Enable component reuse, modularity, and maintainability", "C. Enforce central orchestration", "D. Promote inheritance over composition"],
+            "answer": "B",
+            "reason": "The goal of Componentization is to enable component reuse, modularity, and maintainability in complex software systems."
+        },
+        {
+            "question": "How does Observability differ from simple Monitoring?",
+            "choices": ["A. Observability only uses logs", "B. Monitoring focuses on known problems, Observability helps explore unknown system behavior", "C. Monitoring requires full traces, Observability does not", "D. Observability ignores metrics"],
+            "answer": "B",
+            "reason": "Monitoring focuses on known problems (alerting on predefined metrics), while Observability helps engineers explore unknown behavior and debug complex issues using metrics, logs, and traces."
+        },
+        {
+            "question": "What is the role of a Provides Interface in Component-Based Systems?",
+            "choices": ["A. To declare services the component consumes", "B. To define public services the component offers to others", "C. To define private internal methods", "D. To specify required third-party services"],
+            "answer": "B",
+            "reason": "A Provides Interface defines the public services that a component offers for use by other components."
+        },
+        {
+            "question": "What is the role of a Requires Interface in Component-Based Systems?",
+            "choices": ["A. To declare services the component offers", "B. To define internal services only", "C. To declare services the component depends on", "D. To expose public APIs"],
+            "answer": "C",
+            "reason": "A Requires Interface declares the services that a component depends on and expects to be provided by other components or the framework."
+        },
+        {
+            "question": "What is a primary purpose of a Component Repository?",
+            "choices": ["A. To enforce runtime dependency injection", "B. To centralize storage of components and their metadata", "C. To replace all uses of Maven", "D. To manage API Gateway routing"],
+            "answer": "B",
+            "reason": "A Component Repository serves as a central storage location for components, their metadata, and versioned artifacts."
+        },
+        {
+            "question": "How does a Component Adapter differ from a Service Locator?",
+            "choices": ["A. Component Adapter bridges incompatible component interfaces, Service Locator provides dynamic service lookup", "B. Both perform service discovery", "C. Component Adapter discovers services at runtime", "D. Service Locator modifies component behavior"],
+            "answer": "A",
+            "reason": "A Component Adapter bridges incompatible component interfaces so they can work together, while a Service Locator provides dynamic service lookup at runtime."
+        },
+        {
+            "question": "How does Service Registry differ from Service Discovery?",
+            "choices": ["A. Service Registry and Service Discovery are identical", "B. Service Registry is a database of service endpoints, Service Discovery is the process of clients querying it", "C. Service Discovery stores endpoint data", "D. Service Discovery eliminates the need for a registry"],
+            "answer": "B",
+            "reason": "A Service Registry is a database that stores service endpoints, and Service Discovery is the dynamic process by which clients query this registry to locate services."
+        },
+        {
+            "question": "In Component Testing vs Integration Testing, what is a subtle difference?",
+            "choices": ["A. Component Testing validates system-wide flows", "B. Integration Testing mocks all dependencies", "C. Component Testing focuses on correctness of one component with controlled dependencies, Integration Testing focuses on data flow between multiple real components", "D. They are always interchangeable"],
+            "answer": "C",
+            "reason": "Component Testing focuses on testing the correctness of a single component (potentially with mocks), while Integration Testing validates data flow between multiple real components or systems."
+        },
+        {
+            "question": "Why is 2PC not widely used in Microservices?",
+            "choices": ["A. It simplifies global transactions", "B. It requires global locks and tight coupling, harming scalability", "C. It uses eventual consistency", "D. It enables asynchronous messaging"],
+            "answer": "B",
+            "reason": "2PC requires distributed locks and tight coupling across services, which harms scalability and makes it unsuitable for modern Microservices architecture."
+        },
+        {
+            "question": "What is a common misconception about API Gateway?",
+            "choices": ["A. API Gateway replaces Service Discovery", "B. API Gateway is a single point of entry and does not replace Service Discovery", "C. API Gateway must perform DB joins", "D. API Gateway stores data"],
+            "answer": "B",
+            "reason": "A common misconception is that API Gateway replaces Service Discovery — it acts as a single point of entry but often still relies on Service Discovery to route requests dynamically."
+        },
+        {
+            "question": "In AOP, what is the difference between Pointcut and Join Point?",
+            "choices": ["A. Pointcut is a runtime method call, Join Point is an expression", "B. Pointcut matches Join Points, Join Point is an actual point in execution (e.g. method call)", "C. They are identical", "D. Pointcut performs advice logic"],
+            "answer": "B",
+            "reason": "A Pointcut is an expression that matches certain Join Points (specific points in execution such as method calls) where advice should be applied."
+        },
+        {
+            "question": "What is a drawback of Layered Architecture?",
+            "choices": ["A. Forces components to be stateless", "B. Forces cross-layer optimization", "C. Changes in one layer often require redeploying the entire application", "D. Prevents caching"],
+            "answer": "C",
+            "reason": "A drawback of Layered Architecture is that changes in one layer often require redeploying the entire application because the layers are tightly coupled and not deployed as independent components."
+        },
+        {
+            "question": "How does a Component Adapter differ from Component Composition?",
+            "choices": ["A. Component Adapter allows runtime loading of components", "B. Component Adapter bridges incompatible interfaces, Component Composition combines components into larger systems", "C. Component Composition is static only", "D. They are identical"],
+            "answer": "B",
+            "reason": "A Component Adapter bridges incompatible interfaces so components can interact, while Component Composition combines components into larger systems via defined composition patterns (sequential, hierarchical, additive)."
+        },
+        {
+            "question": "What is the subtle difference between Dependency Injection (DI) and Inversion of Control (IoC)?",
+            "choices": ["A. DI is a subset of IoC focusing on providing dependencies externally", "B. IoC is a subset of DI", "C. They are completely unrelated", "D. DI always requires Service Locator"],
+            "answer": "A",
+            "reason": "Dependency Injection is a form of Inversion of Control — IoC is the broader principle of framework-controlled flow, while DI specifically provides dependencies externally rather than having components construct them."
+        },
+        {
+            "question": "In JPMS, what does 'exports' mean in module-info.java?",
+            "choices": ["A. Declares required modules", "B. Specifies packages to expose to other modules", "C. Allows runtime reflection", "D. Declares service implementations"],
+            "answer": "B",
+            "reason": "The 'exports' directive specifies which packages in a module should be exposed to other modules."
+        },
+        {
+            "question": "In JPMS, what does 'opens' mean in module-info.java?",
+            "choices": ["A. Declares a required dependency", "B. Allows runtime reflection for frameworks like Spring", "C. Makes a service public", "D. Exports all module classes"],
+            "answer": "B",
+            "reason": "The 'opens' directive allows runtime reflection access to specific packages — this is used by frameworks like Spring for dependency injection and proxies."
+        },
+        {
+            "question": "In CQRS, what is the primary distinction between Command and Query models?",
+            "choices": ["A. Both models use the same database", "B. Command model handles write operations, Query model handles read operations", "C. Command model must use NoSQL", "D. Both models are identical"],
+            "answer": "B",
+            "reason": "In CQRS, the Command model handles create, update, and delete (write) operations, while the Query model handles read-only operations, allowing independent optimization."
+        },
+        {
+            "question": "In EDA, when would a Mediator topology be preferred over Broker?",
+            "choices": ["A. When maximum decoupling is required", "B. When event flow must be centrally coordinated", "C. When using REST only", "D. When Broker is not scalable"],
+            "answer": "B",
+            "reason": "Mediator topology is preferred when event flow needs to be centrally coordinated through an orchestrator that controls the sequence and routing of events."
+        },
+        {
+            "question": "What is a key limitation of REST in complex enterprise scenarios?",
+            "choices": ["A. REST cannot use HTTP/2", "B. REST lacks standardization for complex operations and versioning", "C. REST cannot perform CRUD operations", "D. REST requires SOAP"],
+            "answer": "B",
+            "reason": "REST lacks strict standardization for complex operations and versioning, which can make managing complex APIs more difficult in large enterprise scenarios."
+        },
+        {
+            "question": "Which Testing Pyramid layer is most effective at catching logic errors in isolated units?",
+            "choices": ["A. End-to-End Testing", "B. Integration Testing", "C. Component Testing", "D. Unit Testing"],
+            "answer": "D",
+            "reason": "Unit Testing is most effective for catching logic errors in isolated units, such as individual methods or classes."
+        },
+        {
+            "question": "What is a best practice for Integration Testing?",
+            "choices": ["A. Use mocks for all services", "B. Validate interaction between real components and services", "C. Focus only on unit logic", "D. Avoid HTTP calls"],
+            "answer": "B",
+            "reason": "Integration Testing best practices include validating interactions between real components and services to ensure correct data flow and behavior across system boundaries."
+        },
+        {
+            "question": "Why should Component functionality be exposed via interfaces in Componentization Rules?",
+            "choices": ["A. To enforce tight coupling", "B. To promote loose coupling and enable flexibility in implementations", "C. To allow runtime type checking", "D. To expose private state"],
+            "answer": "B",
+            "reason": "Exposing functionality via interfaces promotes loose coupling and allows the flexibility to change or replace implementations without affecting consumers."
+        },
+        {
+            "question": "What is a key limitation of using ServiceLoader compared to modern DI frameworks?",
+            "choices": ["A. ServiceLoader supports constructor injection", "B. ServiceLoader does not support DI scopes or lifecycle management", "C. ServiceLoader enforces compile-time wiring", "D. ServiceLoader supports field injection"],
+            "answer": "B",
+            "reason": "ServiceLoader lacks support for DI scopes, lifecycle management, and complex dependency graphs — modern DI frameworks like Spring provide these features."
+        },
+        {
+            "question": "How does Component Testing subtly differ from Unit Testing?",
+            "choices": ["A. Component Testing mocks all dependencies", "B. Component Testing validates integrated units as a component with controlled dependencies, Unit Testing tests isolated units only", "C. They are the same", "D. Unit Testing uses real databases"],
+            "answer": "B",
+            "reason": "Component Testing validates clusters of integrated units within a component and tests its interfaces and interactions, while Unit Testing focuses on isolated units (methods/classes)."
+        },
+        {
+            "question": "When would you prefer Gray-Box Composition over Black-Box Composition?",
+            "choices": ["A. When you want full encapsulation", "B. When you want no visibility into internal behavior", "C. When you want controlled visibility via metadata/configuration to customize behavior", "D. When you must avoid AOP"],
+            "answer": "C",
+            "reason": "Gray-Box Composition allows controlled visibility into internal component behavior via configuration or metadata, providing a balance between flexibility and encapsulation."
+        },
+        {
+            "question": "In versioning Microservices vs Monoliths, what is a common challenge for Microservices?",
+            "choices": ["A. Services can share database tables", "B. Versioning APIs and maintaining backward compatibility across independently deployed services", "C. Versioning is not needed", "D. Monoliths require more versioning effort"],
+            "answer": "B",
+            "reason": "In Microservices, each service is deployed independently, so maintaining backward compatibility and API versioning across services is a major challenge."
+        },
+        {
+            "question": "What is a practical tradeoff of REST statelessness?",
+            "choices": ["A. Simplifies server-side state management but may increase overhead by requiring more data per request", "B. Makes caching impossible", "C. Enforces global transaction scope", "D. Requires SOAP compatibility"],
+            "answer": "A",
+            "reason": "REST statelessness simplifies server-side state management and improves scalability, but it can increase request overhead because each request must contain all necessary context."
+        },
+        {
+            "question": "In CQRS, what is a practical implication of eventual consistency?",
+            "choices": ["A. The read model will reflect write changes immediately", "B. The read model may temporarily lag behind the write model", "C. The system guarantees strong consistency at all times", "D. No data duplication is allowed"],
+            "answer": "B",
+            "reason": "A practical implication of CQRS is that the read model may temporarily lag behind the write model — eventual consistency is expected in most CQRS implementations."
+        },
+        {
+            "question": "What is a typical use case for Event-Driven Architecture (EDA)?",
+            "choices": ["A. High-throughput real-time data pipelines and event-driven workflows", "B. Strict synchronous transaction processing", "C. Simplifying layered monoliths", "D. Avoiding all use of messaging systems"],
+            "answer": "A",
+            "reason": "EDA is ideal for high-throughput real-time data pipelines and systems where asynchronous event-driven workflows are required."
+        },
+        {
+            "question": "What is a common misuse pattern of API Gateway?",
+            "choices": ["A. Using it for centralized authentication", "B. Using it for routing", "C. Embedding heavy business logic inside the gateway", "D. Providing a single entry point"],
+            "answer": "C",
+            "reason": "A common misuse pattern is embedding heavy business logic inside the API Gateway — the gateway should focus on cross-cutting concerns, not business logic."
+        },
+        {
+            "question": "How does Load Testing differ from Stress Testing in production scenario planning?",
+            "choices": ["A. Load Testing validates behavior under expected load, Stress Testing explores system limits and failure points", "B. Stress Testing only measures response time", "C. Load Testing must simulate sudden spikes", "D. Stress Testing only applies to monoliths"],
+            "answer": "A",
+            "reason": "Load Testing validates system behavior under expected load, while Stress Testing explores the system’s limits and how it behaves when pushed beyond expected capacity."
+        },
+        {
+            "question": "When is the Service Locator Pattern considered an anti-pattern?",
+            "choices": ["A. When it is used to manage simple dependencies", "B. When it is used in combination with DI frameworks", "C. When it hides dependencies from the class interface, making the code harder to test and maintain", "D. When it supports service versioning"],
+            "answer": "C",
+            "reason": "Service Locator is considered an anti-pattern when it hides dependencies from the class interface — this makes code harder to test, maintain, and reason about."
+        },
+        {
+            "question": "What is the primary purpose of a Component Model?",
+            "choices": ["A. To enforce runtime reflection", "B. To define structure, behavior, and interaction standards for components", "C. To force stateless design", "D. To require specific communication protocols"],
+            "answer": "B",
+            "reason": "A Component Model defines structure, behavior, and interaction standards for components, ensuring interoperability and consistency."
+        },
+        {
+            "question": "How does a modern Component Framework (like Spring) differ from EJB?",
+            "choices": ["A. Component Frameworks are more heavyweight", "B. EJB does not support DI", "C. Component Frameworks are lightweight, flexible, and suitable for Microservices, EJB is heavyweight and tightly coupled", "D. EJB is required for REST APIs"],
+            "answer": "C",
+            "reason": "Modern Component Frameworks (Spring) are lightweight, flexible, and suitable for Microservices; EJB is heavyweight and tied to the Java EE platform."
+        },
+        {
+            "question": "In AOP, what are the main types of Weaving?",
+            "choices": ["A. Build-time, compile-time, load-time, runtime", "B. Unit-time only", "C. REST-time only", "D. SOAP-time only"],
+            "answer": "A",
+            "reason": "The main types of Weaving in AOP are build-time, compile-time, load-time, and runtime — this refers to when aspects are applied to the target code."
+        },
+        {
+            "question": "How does the Whiteboard Model differ from DI and Service Locator?",
+            "choices": ["A. Whiteboard uses static service bindings", "B. Whiteboard allows dynamic service publishing and consumption, while DI and Service Locator are more static", "C. Service Locator requires Whiteboard", "D. DI does not support loose coupling"],
+            "answer": "B",
+            "reason": "The Whiteboard Model enables dynamic publishing and consumption of services (high flexibility), while DI and Service Locator typically have more static wiring."
+        },
+        {
+            "question": "What is a real-world benefit of using a Component Repository?",
+            "choices": ["A. It simplifies thread management", "B. It enables easy sharing, versioning, and reuse of components across multiple projects", "C. It eliminates the need for APIs", "D. It forces the use of SOAP"],
+            "answer": "B",
+            "reason": "A Component Repository allows for easy sharing, versioning, and reuse of components across multiple projects and teams, improving efficiency and consistency."
+        },
+        {
+            "question": "How does a Mediator-based EDA topology compare to an Orchestration Saga?",
+            "choices": ["A. Mediator is synchronous only", "B. Mediator manages event flow, Orchestration Saga manages transaction flow with compensating transactions", "C. Mediator replaces database transactions", "D. Mediator always requires REST"],
+            "answer": "B",
+            "reason": "Mediator topology manages event flow in EDA, while Orchestration Saga explicitly manages transaction flow across distributed systems using compensating transactions."
+        },
+        {
+            "question": "When should Event Sourcing and CQRS be combined?",
+            "choices": ["A. Never — they are incompatible", "B. When full audit trail and flexible read models are needed", "C. When strict ACID consistency is required", "D. Only in SOAP-based systems"],
+            "answer": "B",
+            "reason": "Event Sourcing and CQRS are often combined when a full audit trail of state changes and flexible, optimized read models are needed — they complement each other well."
+        },
+        {
+            "question": "What is a common pitfall of E2E Testing in the Testing Pyramid?",
+            "choices": ["A. It always runs fast", "B. E2E Testing is fragile and can break easily with UI changes", "C. E2E Testing replaces all other layers", "D. E2E Testing cannot validate UI flows"],
+            "answer": "B",
+            "reason": "A common pitfall of E2E Testing is that it is fragile — small UI changes can easily break tests, making maintenance challenging."
+        },
+        {
+            "question": "How do Prometheus and ELK Stack differ in observability focus?",
+            "choices": ["A. Both only do logging", "B. Prometheus focuses on metrics, ELK focuses on logs", "C. Both focus on metrics only", "D. ELK Stack replaces tracing"],
+            "answer": "B",
+            "reason": "Prometheus focuses on collecting and querying metrics (numerical time-series data), while ELK Stack (Elasticsearch, Logstash, Kibana) focuses on aggregating, storing, and visualizing logs."
+        },
+        {
+            "question": "In the Saga Pattern, what is the purpose of compensating transactions?",
+            "choices": ["A. To optimize system performance", "B. To enforce synchronous workflows", "C. To undo previous steps if a failure occurs later in the Saga", "D. To manage REST caching"],
+            "answer": "C",
+            "reason": "Compensating transactions are used in the Saga Pattern to undo previous actions if a later step in the Saga fails — ensuring eventual consistency across distributed systems."
+        }
     ]
 }
