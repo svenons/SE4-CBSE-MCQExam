@@ -1,5 +1,5 @@
 {
-    "Component-Based Systems": [
+    "Lecture1: Component-Based Systems": [
         {
             "question": "What is a core characteristic of a software component?",
             "choices": ["A. Requires a main method", "B. Is always a class", "C. Is independently deployable with well-defined interfaces", "D. Must use object-oriented inheritance"],
@@ -181,7 +181,7 @@
             "reason": "SOA often involves larger and more complex service contracts and centralized control mechanisms like ESB."
         }
     ],
-    "Java Crash Course & Introduction to Maven": [
+    "Lecture2: Java Crash Course & Introduction to Maven": [
         {
             "question": "Which component of the JVM is responsible for loading classes?",
             "choices": ["A. Execution Engine", "B. Class Loader", "C. JIT Compiler", "D. Garbage Collector"],
@@ -363,7 +363,7 @@
             "reason": "The Whiteboard Component Model enables dynamic registration and decoupling, making it suitable for flexible, highly decoupled systems."
         }
     ],
-        "Component-Oriented Design & Architecture": [
+    "Lecture3: Component-Oriented Design & Architecture": [
         {
             "question": "Which characteristic of CBSE refers to the ability to use a component across multiple systems?",
             "choices": ["A. Modularity", "B. Encapsulation", "C. Reusability", "D. Maintainability"],
@@ -543,6 +543,370 @@
             "choices": ["A. Provided Interface", "B. Implemented Interface", "C. Required Interface", "D. Composite Interface"],
             "answer": "C",
             "reason": "A Required Interface defines the services that a component needs from other components."
+        }
+    ],
+    "Lecture4: JPMS & Service Locator Pattern": [
+        {
+            "question": "Which principle suggests that each component should have only one responsibility?",
+            "choices": ["A. Open-Closed Principle", "B. Interface Segregation Principle", "C. Single Responsibility Principle", "D. Dependency Inversion Principle"],
+            "answer": "C",
+            "reason": "The Single Responsibility Principle (SRP) suggests that each component should have only one responsibility."
+        },
+        {
+            "question": "What is the primary purpose of the Service Locator Pattern?",
+            "choices": ["A. To manage database connections", "B. To create singletons", "C. To return service instances on demand", "D. To log application activity"],
+            "answer": "C",
+            "reason": "The Service Locator Pattern is used to return service instances on demand, providing centralized access to services."
+        },
+        {
+            "question": "Which Java utility allows dynamic service discovery at runtime and is part of the SPI mechanism?",
+            "choices": ["A. Reflection API", "B. ServiceLoader", "C. Singleton", "D. DI Framework"],
+            "answer": "B",
+            "reason": "ServiceLoader is a built-in utility in Java that allows dynamic service discovery at runtime and is part of the SPI mechanism."
+        },
+        {
+            "question": "Where are service implementations registered when using SPI?",
+            "choices": ["A. META-INF/resources", "B. META-INF/config", "C. META-INF/services", "D. META-INF/classes"],
+            "answer": "C",
+            "reason": "Service implementations are registered in the META-INF/services directory when using SPI."
+        },
+        {
+            "question": "Which is a limitation of ServiceLoader?",
+            "choices": ["A. Supports AOP out of the box", "B. Allows constructor injection", "C. No prioritization or lifecycle management", "D. Supports external source loading"],
+            "answer": "C",
+            "reason": "ServiceLoader has limitations including no prioritization of services, no lifecycle management, and limited support for complex dependency injection."
+        },
+        {
+            "question": "What is the primary purpose of the Java Platform Module System (JPMS)?",
+            "choices": ["A. Provide a new garbage collector", "B. Replace reflection with annotations", "C. Provide modularization of Java applications", "D. Eliminate the need for ServiceLoader"],
+            "answer": "C",
+            "reason": "JPMS provides modularization of Java applications and the JDK itself, solving various dependency and packaging issues."
+        },
+        {
+            "question": "Which keyword in module-info.java is used to declare required modules?",
+            "choices": ["A. provides", "B. uses", "C. requires", "D. exports"],
+            "answer": "C",
+            "reason": "The requires keyword in module-info.java declares required modules."
+        },
+        {
+            "question": "Which JPMS keyword allows runtime reflection on a package?",
+            "choices": ["A. uses", "B. requires", "C. provides", "D. opens"],
+            "answer": "D",
+            "reason": "The opens keyword allows runtime reflection on a package, which is used by some frameworks."
+        },
+        {
+            "question": "Which problem is NOT addressed by JPMS?",
+            "choices": ["A. Classpath Hell", "B. Lack of encapsulation", "C. Large monolithic JDK", "D. Network latency issues"],
+            "answer": "D",
+            "reason": "JPMS addresses Classpath Hell, lack of encapsulation, and large JDK issues, but it does not address network latency."
+        },
+        {
+            "question": "How does a Module differ from a Component?",
+            "choices": ["A. Module focuses on UI design", "B. Component manages code dependencies", "C. Module handles code organization and dependencies, Component focuses on behavior and functionality", "D. They are always the same"],
+            "answer": "C",
+            "reason": "A Module handles code organization and dependencies, while a Component focuses on behavior and functionality (e.g. UI, business logic)."
+        },
+        {
+            "question": "What JPMS benefit directly addresses the problem of 'Classpath Hell'?",
+            "choices": ["A. Smaller runtime", "B. Enhanced reflection", "C. Strong encapsulation", "D. Better dependency management"],
+            "answer": "D",
+            "reason": "JPMS provides better dependency management, which helps solve the issue of 'Classpath Hell' by making dependencies explicit and modular."
+        },
+        {
+            "question": "What JPMS feature allows the creation of smaller custom Java runtimes?",
+            "choices": ["A. module-info.java", "B. jlink", "C. jmod", "D. jpackage"],
+            "answer": "B",
+            "reason": "jlink allows the creation of smaller, custom Java runtimes using JPMS modules."
+        },
+        {
+            "question": "Which ServiceLoader limitation can cause an application to silently fail to load a service?",
+            "choices": ["A. No exception if service missing", "B. No lifecycle management", "C. No constructor injection", "D. No support for AOP"],
+            "answer": "A",
+            "reason": "ServiceLoader returns an empty iterator if a service is missing, without throwing an exception — this can cause silent failures."
+        },
+        {
+            "question": "ServiceLoader is best suited for which kind of architecture?",
+            "choices": ["A. Monolithic apps", "B. Real-time embedded systems", "C. Plugin-based architectures", "D. Microservices"],
+            "answer": "C",
+            "reason": "ServiceLoader is ideal for plugin-based architectures where dynamic service discovery is needed."
+        },
+        {
+            "question": "Which mechanism supports automatic dependency injection and lifecycle management?",
+            "choices": ["A. ServiceLoader", "B. Service Locator", "C. DI frameworks (e.g. Spring)", "D. META-INF/services"],
+            "answer": "C",
+            "reason": "DI frameworks such as Spring provide automatic dependency injection and lifecycle management."
+        },
+        {
+            "question": "What is the key difference between Service Locator and Dependency Injection?",
+            "choices": ["A. Service Locator supports AOP", "B. Dependency Injection is pull-based, Service Locator is push-based", "C. Service Locator requires manual lookup, DI provides automatic injection", "D. There is no difference"],
+            "answer": "C",
+            "reason": "Service Locator requires manual lookup of services, while Dependency Injection automatically injects dependencies into components."
+        },
+        {
+            "question": "What is a key difference between Module and Component in Java architecture?",
+            "choices": ["A. Modules handle UI logic", "B. Components manage memory", "C. Modules manage code organization and dependencies, Components focus on functionality", "D. Modules and Components are the same thing in Java"],
+            "answer": "C",
+            "reason": "Modules manage code organization and dependencies, while Components focus on behavior and functionality such as UI or business logic."
+        },
+        {
+            "question": "Which problem did JPMS help solve compared to the traditional Java classpath?",
+            "choices": ["A. Database connection pooling", "B. Global transaction management", "C. Lack of compile-time dependency verification", "D. UI theming"],
+            "answer": "C",
+            "reason": "JPMS helps solve the problem of lack of compile-time dependency verification, which was a weakness of the traditional Java classpath."
+        },
+        {
+            "question": "Which JPMS keyword declares a service dependency in module-info.java?",
+            "choices": ["A. provides", "B. exports", "C. requires", "D. uses"],
+            "answer": "D",
+            "reason": "The uses keyword declares a service dependency in module-info.java."
+        },
+        {
+            "question": "Which is a PRO of using ServiceLoader?",
+            "choices": ["A. No lifecycle management", "B. Built-in to Java, no third-party framework required", "C. Full support for constructor injection", "D. Guarantees service order"],
+            "answer": "B",
+            "reason": "A key advantage of ServiceLoader is that it is built-in to Java and does not require any third-party framework to use."
+        },
+        {
+            "question": "Which mechanism provides automatic injection of dependencies?",
+            "choices": ["A. ServiceLocator", "B. ServiceLoader", "C. Dependency Injection (DI)", "D. Manual Constructor Calls"],
+            "answer": "C",
+            "reason": "Dependency Injection (DI) automatically injects dependencies, typically managed by a framework like Spring."
+        },
+        {
+            "question": "Which mechanism requires manual service lookup in a central registry?",
+            "choices": ["A. ServiceLoader", "B. Dependency Injection", "C. Service Locator", "D. Reflection"],
+            "answer": "C",
+            "reason": "The Service Locator pattern requires components to manually look up services from a central registry."
+        },
+        {
+            "question": "Which mechanism uses the META-INF/services directory for service registration?",
+            "choices": ["A. Service Locator", "B. ServiceLoader", "C. Dependency Injection", "D. Reflection API"],
+            "answer": "B",
+            "reason": "ServiceLoader uses the META-INF/services directory to register service implementations."
+        },
+        {
+            "question": "Which mechanism is most suitable for plugin-based architectures?",
+            "choices": ["A. Dependency Injection", "B. ServiceLocator", "C. Factory Pattern", "D. ServiceLoader"],
+            "answer": "D",
+            "reason": "ServiceLoader is ideal for plugin-based architectures that require dynamic service discovery."
+        },
+        {
+            "question": "In Java architecture, which is the focus of a Module?",
+            "choices": ["A. Defining business functionality", "B. Managing code organization and dependencies", "C. Implementing UI design", "D. Managing user sessions"],
+            "answer": "B",
+            "reason": "A Module focuses on managing code organization and dependencies in a Java system."
+        },
+        {
+            "question": "In Java architecture, which is the focus of a Component?",
+            "choices": ["A. Code packaging and distribution", "B. Handling JVM memory", "C. Defining behavior and functionality such as UI or business logic", "D. Managing modules"],
+            "answer": "C",
+            "reason": "A Component focuses on behavior and functionality — such as UI elements, business logic, or services."
+        },
+        {
+            "question": "Which problem did JPMS directly address compared to the traditional Java classpath?",
+            "choices": ["A. Lack of thread management", "B. No compile-time dependency verification", "C. No support for web apps", "D. Limited garbage collection"],
+            "answer": "B",
+            "reason": "JPMS introduced compile-time dependency verification, which the traditional classpath lacked."
+        },
+        {
+            "question": "Which of the following was a problem before JPMS?",
+            "choices": ["A. Strong encapsulation", "B. Classpath Hell", "C. Compile-time dependency checks", "D. Smaller custom runtimes"],
+            "answer": "B",
+            "reason": "Classpath Hell — where conflicting classes on the classpath caused runtime errors — was a major problem before JPMS."
+        },
+        {
+            "question": "Which is a limitation of ServiceLoader?",
+            "choices": ["A. Built-in Java support", "B. Easy service prioritization", "C. No lifecycle management", "D. Full support for dependency injection"],
+            "answer": "C",
+            "reason": "ServiceLoader has limitations such as no lifecycle management or prioritization of loaded services."
+        },
+        {
+            "question": "Which is a key benefit of using JPMS?",
+            "choices": ["A. Makes all public classes globally accessible", "B. Increases the size of the Java runtime", "C. Strong encapsulation of modules", "D. Requires external tools to manage modules"],
+            "answer": "C",
+            "reason": "One of the main benefits of JPMS is strong encapsulation — only explicitly exported packages are visible to other modules."
+        }
+    ],
+    "Lecture5: Dependency Injection & Component Frameworks": [
+        {
+            "question": "Which type of component framework is designed to be reusable across different domains?",
+            "choices": ["A. Vertical Component Framework", "B. Horizontal Component Framework", "C. Domain-specific Framework", "D. Legacy Framework"],
+            "answer": "B",
+            "reason": "A Horizontal Component Framework is designed to be reusable across different domains and is loosely coupled."
+        },
+        {
+            "question": "Which type of component composition requires recompilation and redeployment when changes are made?",
+            "choices": ["A. Dynamic Component Composition", "B. Runtime Composition", "C. Static Component Composition", "D. Loose Composition"],
+            "answer": "C",
+            "reason": "Static Component Composition is integrated at compile-time/build-time and requires recompilation and redeployment when changes occur."
+        },
+        {
+            "question": "In which type of component composition is the internal logic completely hidden?",
+            "choices": ["A. White-box Composition", "B. Black-box Composition", "C. Gray-box Composition", "D. Hybrid Composition"],
+            "answer": "B",
+            "reason": "In Black-box Composition, the internal logic is completely hidden and interaction happens through well-defined interfaces."
+        },
+        {
+            "question": "Which type of Java component model defines lifecycle management and component communication mechanisms?",
+            "choices": ["A. Factory Pattern", "B. Component Model", "C. Singleton Pattern", "D. MVC Model"],
+            "answer": "B",
+            "reason": "A Component Model defines lifecycle management, communication mechanisms, and composition rules for components."
+        },
+        {
+            "question": "Which EJB type is used for asynchronous processing?",
+            "choices": ["A. Stateless Session Bean", "B. Stateful Session Bean", "C. Message-Driven Bean", "D. Entity Bean"],
+            "answer": "C",
+            "reason": "Message-Driven Beans are used for asynchronous processing in the EJB architecture."
+        },
+        {
+            "question": "Which is a major problem with traditional EJBs in the context of modern microservices architecture?",
+            "choices": ["A. Too lightweight", "B. Requires no server", "C. Heavyweight and requires a full EE-compliant server", "D. Cannot use transactions"],
+            "answer": "C",
+            "reason": "Traditional EJBs are heavyweight and require a full EE-compliant server, making them unsuitable for modern lightweight microservices."
+        },
+        {
+            "question": "What does Inversion of Control (IoC) primarily promote?",
+            "choices": ["A. Tight coupling", "B. Loose coupling and modularity", "C. Direct control by the main program", "D. Strong inheritance hierarchies"],
+            "answer": "B",
+            "reason": "IoC promotes loose coupling and modularity by letting the framework control the program flow."
+        },
+        {
+            "question": "Which type of Dependency Injection is best suited for mandatory dependencies?",
+            "choices": ["A. Interface Injection", "B. Setter Injection", "C. Constructor Injection", "D. Field Injection"],
+            "answer": "C",
+            "reason": "Constructor Injection is best for mandatory dependencies, ensuring they are provided when the object is created."
+        },
+        {
+            "question": "Which type of Dependency Injection is best used for optional dependencies?",
+            "choices": ["A. Constructor Injection", "B. Setter Injection", "C. Field Injection", "D. Reflection Injection"],
+            "answer": "B",
+            "reason": "Setter Injection is typically used for optional dependencies, allowing them to be set after object construction."
+        },
+        {
+            "question": "What is the main purpose of the Decorator Design Pattern?",
+            "choices": ["A. Replace inheritance", "B. Add responsibilities to objects at runtime", "C. Simplify code generation", "D. Eliminate object dependencies"],
+            "answer": "B",
+            "reason": "The Decorator Design Pattern adds responsibilities to objects at runtime, promoting flexibility through composition."
+        },
+        {
+            "question": "Which of the following violates the Liskov Substitution Principle (LSP)?",
+            "choices": ["A. Subclass uses same method signatures as superclass", "B. Subclass weakens postconditions", "C. Subclass is interchangeable with superclass", "D. Subclass preserves behavioral consistency"],
+            "answer": "B",
+            "reason": "Weakening postconditions in a subclass violates the Liskov Substitution Principle, which requires behavioral consistency."
+        },
+        {
+            "question": "Which type of Dependency Injection is least commonly used and typically framework-specific?",
+            "choices": ["A. Constructor Injection", "B. Setter Injection", "C. Interface Injection", "D. Field Injection"],
+            "answer": "C",
+            "reason": "Interface Injection is less commonly used and is typically found in specific frameworks rather than general practice."
+        },
+        {
+            "question": "Which framework is considered a modern lightweight alternative to EJB?",
+            "choices": ["A. CORBA", "B. Spring Framework", "C. Java EE", "D. COM"],
+            "answer": "B",
+            "reason": "Spring Framework is a modern lightweight component model and Dependency Injection framework that offers an alternative to the heavier EJB model."
+        },
+        {
+            "question": "Which term describes a framework controlling the program flow instead of the developer writing main flow logic?",
+            "choices": ["A. Factory Pattern", "B. Inversion of Control (IoC)", "C. Singleton Pattern", "D. Prototype Pattern"],
+            "answer": "B",
+            "reason": "Inversion of Control (IoC) describes the principle where a framework controls the program flow instead of the developer writing main flow logic."
+        },
+        {
+            "question": "Which type of component composition allows components to be loaded or changed at runtime?",
+            "choices": ["A. Static Component Composition", "B. Dynamic Component Composition", "C. Black-box Composition", "D. Tight Component Composition"],
+            "answer": "B",
+            "reason": "Dynamic Component Composition allows components to be loaded or changed at runtime, improving adaptability."
+        },
+        {
+            "question": "In which type of composition is the internal logic both visible and modifiable?",
+            "choices": ["A. Black-box Composition", "B. Gray-box Composition", "C. White-box Composition", "D. Static Composition"],
+            "answer": "C",
+            "reason": "White-box Composition exposes and allows modification of the internal logic of the component."
+        },
+        {
+            "question": "Which type of component composition is a mix of Black-box and White-box, exposing some metadata or extensions?",
+            "choices": ["A. Static Composition", "B. Dynamic Composition", "C. Gray-box Composition", "D. White-box Composition"],
+            "answer": "C",
+            "reason": "Gray-box Composition is a mix of Black-box and White-box, exposing some metadata or extension points for flexibility."
+        },
+        {
+            "question": "What is a key difference between EJB and Spring Framework?",
+            "choices": ["A. EJB is lightweight; Spring is heavyweight", "B. Spring supports DI and is lightweight; EJB requires full EE container", "C. Both require EE container", "D. EJB supports AOP natively, Spring does not"],
+            "answer": "B",
+            "reason": "Spring Framework supports DI and is lightweight, whereas EJB requires a full EE-compliant container and is heavier."
+        },
+        {
+            "question": "What is the relationship between IoC and DI?",
+            "choices": ["A. DI is an implementation of IoC", "B. IoC is a type of DI", "C. They are unrelated", "D. DI replaces IoC"],
+            "answer": "A",
+            "reason": "Dependency Injection (DI) is a specific implementation of the Inversion of Control (IoC) principle."
+        },
+        {
+            "question": "Which type of injection is best when dependency values must always be provided during object creation?",
+            "choices": ["A. Interface Injection", "B. Setter Injection", "C. Constructor Injection", "D. Field Injection"],
+            "answer": "C",
+            "reason": "Constructor Injection is used when dependency values must always be provided during object creation."
+        },
+        {
+            "question": "Which type of component composition allows components to be changed at runtime without redeploying the application?",
+            "choices": ["A. Static Component Composition", "B. Dynamic Component Composition", "C. Black-box Composition", "D. Tight Component Composition"],
+            "answer": "B",
+            "reason": "Dynamic Component Composition allows components to be changed at runtime, making the system more adaptable."
+        },
+        {
+            "question": "Which type of component composition requires recompilation and redeployment when components change?",
+            "choices": ["A. Black-box Composition", "B. Gray-box Composition", "C. Static Component Composition", "D. Dynamic Component Composition"],
+            "answer": "C",
+            "reason": "Static Component Composition integrates components at build-time, requiring recompilation and redeployment when changes occur."
+        },
+        {
+            "question": "In which type of composition is the internal logic of components completely hidden?",
+            "choices": ["A. White-box Composition", "B. Black-box Composition", "C. Gray-box Composition", "D. Hybrid Composition"],
+            "answer": "B",
+            "reason": "In Black-box Composition, the internal logic is completely hidden, and components interact via defined interfaces."
+        },
+        {
+            "question": "Which type of composition allows partial visibility and extensibility via metadata or extensions?",
+            "choices": ["A. Black-box Composition", "B. Gray-box Composition", "C. White-box Composition", "D. Dynamic Composition"],
+            "answer": "B",
+            "reason": "Gray-box Composition allows partial visibility through metadata or extensions, combining aspects of Black-box and White-box composition."
+        },
+        {
+            "question": "Which framework is considered lightweight and supports Dependency Injection out of the box?",
+            "choices": ["A. EJB", "B. Spring Framework", "C. Java EE", "D. CORBA"],
+            "answer": "B",
+            "reason": "Spring Framework is lightweight and provides built-in support for Dependency Injection (DI)."
+        },
+        {
+            "question": "Which component model requires a full Java EE-compliant server and is considered heavyweight?",
+            "choices": ["A. Spring Framework", "B. MicroProfile", "C. EJB", "D. OSGi"],
+            "answer": "C",
+            "reason": "EJB (Enterprise JavaBeans) requires a full EE-compliant server and is considered heavyweight compared to Spring Framework."
+        },
+        {
+            "question": "Which term refers to the design principle where a framework controls the program flow instead of the developer?",
+            "choices": ["A. Dependency Injection", "B. Inversion of Control", "C. Liskov Substitution Principle", "D. Singleton Pattern"],
+            "answer": "B",
+            "reason": "Inversion of Control (IoC) is the design principle where a framework, not the developer, controls the program flow."
+        },
+        {
+            "question": "What is the relationship between IoC and Dependency Injection?",
+            "choices": ["A. IoC is implemented through Dependency Injection", "B. DI is implemented through IoC", "C. They are unrelated", "D. DI replaces IoC entirely"],
+            "answer": "A",
+            "reason": "IoC is implemented through Dependency Injection; DI is one way to achieve Inversion of Control."
+        },
+        {
+            "question": "Violating the Liskov Substitution Principle typically results in:",
+            "choices": ["A. Better modularity", "B. Stronger encapsulation", "C. Unexpected behavior when substituting subclasses", "D. Better inheritance hierarchies"],
+            "answer": "C",
+            "reason": "Violating LSP leads to unexpected behavior when substituting subclasses in place of their superclasses."
+        },
+        {
+            "question": "Which type of Dependency Injection is most suitable for providing mandatory dependencies at object creation?",
+            "choices": ["A. Setter Injection", "B. Interface Injection", "C. Constructor Injection", "D. Field Injection"],
+            "answer": "C",
+            "reason": "Constructor Injection is most suitable for providing mandatory dependencies during object creation, ensuring they are always available."
         }
     ]
 }
