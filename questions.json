@@ -908,5 +908,369 @@
             "answer": "C",
             "reason": "Constructor Injection is most suitable for providing mandatory dependencies during object creation, ensuring they are always available."
         }
+    ],
+    "Lecture6: Spring Framework & Aspect-Oriented Programming (AOP)": [
+        {
+            "question": "Which core feature of the Spring Framework is responsible for managing the lifecycle and configuration of components?",
+            "choices": ["A. MVC", "B. IoC Container", "C. AOP", "D. Spring Boot Starter"],
+            "answer": "B",
+            "reason": "The IoC (Inversion of Control) Container is responsible for managing the lifecycle and configuration of components in the Spring Framework."
+        },
+        {
+            "question": "In Spring, what is an object that is managed by the Spring IoC container called?",
+            "choices": ["A. Bean", "B. Controller", "C. Aspect", "D. Module"],
+            "answer": "A",
+            "reason": "An object that is managed by the Spring IoC container is called a Bean."
+        },
+        {
+            "question": "Which Spring Bean scope creates one instance per HTTP request?",
+            "choices": ["A. Singleton", "B. Prototype", "C. Request", "D. Session"],
+            "answer": "C",
+            "reason": "The Request scope creates a new bean instance for each HTTP request."
+        },
+        {
+            "question": "Which Spring container is considered more advanced and supports AOP, i18n, and events?",
+            "choices": ["A. BeanFactory", "B. AnnotationConfigApplicationContext", "C. WebApplicationContext", "D. ApplicationContext"],
+            "answer": "D",
+            "reason": "ApplicationContext is the more advanced Spring container that supports AOP, internationalization (i18n), and events."
+        },
+        {
+            "question": "Which annotation is used to define a configuration class in Spring?",
+            "choices": ["A. @Component", "B. @Bean", "C. @Configuration", "D. @Service"],
+            "answer": "C",
+            "reason": "The @Configuration annotation is used to define a configuration class in Spring."
+        },
+        {
+            "question": "Which stereotype annotation is used for data access components?",
+            "choices": ["A. @Component", "B. @Controller", "C. @Service", "D. @Repository"],
+            "answer": "D",
+            "reason": "The @Repository annotation is used to indicate a DAO or database access component."
+        },
+        {
+            "question": "In AOP, which term describes an action performed at a particular join point?",
+            "choices": ["A. Aspect", "B. Advice", "C. Pointcut", "D. Weaving"],
+            "answer": "B",
+            "reason": "Advice is the action performed at a particular join point in AOP."
+        },
+        {
+            "question": "Which term in AOP refers to a specific execution point, such as a method call or exception?",
+            "choices": ["A. Aspect", "B. Advice", "C. Join Point", "D. Weaving"],
+            "answer": "C",
+            "reason": "A Join Point is a specific point in the program execution, such as a method call or exception, where an aspect can be applied."
+        },
+        {
+            "question": "Which is a key advantage of using AOP?",
+            "choices": ["A. Increases boilerplate code", "B. Reduces testability", "C. Improves modularity by centralizing cross-cutting concerns", "D. Prevents bean lifecycle management"],
+            "answer": "C",
+            "reason": "AOP improves modularity by centralizing cross-cutting concerns such as logging, security, and transaction management."
+        },
+        {
+            "question": "Which Spring Boot feature simplifies dependency and configuration management?",
+            "choices": ["A. AspectJ", "B. Spring Boot Starter", "C. WebApplicationContext", "D. BeanFactory"],
+            "answer": "B",
+            "reason": "Spring Boot Starters simplify dependency and configuration management by providing pre-configured sets of dependencies."
+        },
+        {
+            "question": "In AOP, which element defines a reusable expression for selecting join points?",
+            "choices": ["A. Advice", "B. Aspect", "C. Pointcut", "D. Weaving"],
+            "answer": "C",
+            "reason": "A Pointcut defines a reusable expression that matches join points where Advice should be applied."
+        },
+        {
+            "question": "What is the process of applying aspects to a target object called?",
+            "choices": ["A. Aspecting", "B. Advising", "C. Weaving", "D. Injecting"],
+            "answer": "C",
+            "reason": "Weaving is the process of applying aspects to a target object, either at compile time, load time, or runtime."
+        },
+        {
+            "question": "Which AOP concept encapsulates a cross-cutting concern?",
+            "choices": ["A. Join Point", "B. Advice", "C. Pointcut", "D. Aspect"],
+            "answer": "D",
+            "reason": "An Aspect encapsulates a cross-cutting concern such as logging, security, or transaction management."
+        },
+        {
+            "question": "Which ApplicationContext implementation is recommended for modern Spring apps using Java-based configuration?",
+            "choices": ["A. ClassPathXmlApplicationContext", "B. FileSystemXmlApplicationContext", "C. AnnotationConfigApplicationContext", "D. WebApplicationContext"],
+            "answer": "C",
+            "reason": "AnnotationConfigApplicationContext is recommended for modern Spring apps using Java-based configuration and annotations."
+        },
+        {
+            "question": "Which bean scope is the default in Spring?",
+            "choices": ["A. Singleton", "B. Prototype", "C. Request", "D. Session"],
+            "answer": "A",
+            "reason": "Singleton is the default scope in Spring, meaning only one instance of the bean is created in the container."
+        },
+        {
+            "question": "Which configuration style is more modern and preferred in new Spring apps?",
+            "choices": ["A. XML-based configuration", "B. Java Annotation-based configuration", "C. Properties file configuration", "D. Manual wiring"],
+            "answer": "B",
+            "reason": "Java Annotation-based configuration is preferred in modern Spring applications for its simplicity and readability."
+        },
+        {
+            "question": "What is a key difference between BeanFactory and ApplicationContext?",
+            "choices": ["A. ApplicationContext only supports XML", "B. BeanFactory supports AOP", "C. ApplicationContext supports advanced features like AOP and events", "D. BeanFactory supports Web MVC"],
+            "answer": "C",
+            "reason": "ApplicationContext supports advanced features like AOP, i18n, events, and Web contexts, while BeanFactory does not."
+        },
+        {
+            "question": "How does AOP differ from traditional code coupling?",
+            "choices": ["A. AOP increases boilerplate code", "B. AOP tightly couples cross-cutting concerns with business logic", "C. AOP centralizes cross-cutting concerns, improving modularity", "D. AOP eliminates the need for DI"],
+            "answer": "C",
+            "reason": "AOP centralizes cross-cutting concerns, such as logging or security, improving modularity and maintainability."
+        },
+        {
+            "question": "What is a key difference between AspectJ and Spring AOP?",
+            "choices": ["A. Spring AOP supports compile-time weaving", "B. AspectJ is fully integrated with Spring Boot", "C. AspectJ is more powerful and supports compile-time weaving, while Spring AOP is simpler and limited to method execution join points", "D. They are identical"],
+            "answer": "C",
+            "reason": "AspectJ is more powerful and supports compile-time weaving and various join points, while Spring AOP is simpler and limited to method execution join points."
+        },
+        {
+            "question": "What is a key benefit of using Spring Boot over standard Spring Framework?",
+            "choices": ["A. Requires complex XML configuration", "B. Forces use of AspectJ", "C. Simplifies app development with auto-configuration and embedded servers", "D. Only works with JDBC"],
+            "answer": "C",
+            "reason": "Spring Boot simplifies app development by providing auto-configuration, embedded servers, and Spring Boot Starters for rapid setup."
+        },
+        {
+            "question": "Which Spring container supports advanced features like AOP, events, and internationalization?",
+            "choices": ["A. BeanFactory", "B. ApplicationContext", "C. BeanPostProcessor", "D. BeanDefinitionRegistry"],
+            "answer": "B",
+            "reason": "ApplicationContext supports advanced features such as AOP, events, and internationalization (i18n), whereas BeanFactory is more basic."
+        },
+        {
+            "question": "Which Spring configuration style is generally preferred in modern applications?",
+            "choices": ["A. XML-based configuration", "B. Manual Java code wiring", "C. Java Annotation-based configuration", "D. WebApplicationContext-only configuration"],
+            "answer": "C",
+            "reason": "Java Annotation-based configuration is preferred in modern Spring applications because it simplifies configuration and reduces boilerplate."
+        },
+        {
+            "question": "Which Spring Bean scope ensures that only one instance of a bean exists in the container?",
+            "choices": ["A. Prototype", "B. Request", "C. Session", "D. Singleton"],
+            "answer": "D",
+            "reason": "Singleton is the default Spring Bean scope, ensuring that only one instance of the bean exists in the container."
+        },
+        {
+            "question": "Which Spring Bean scope creates a new instance of a bean each time it is requested?",
+            "choices": ["A. Singleton", "B. Prototype", "C. Request", "D. Session"],
+            "answer": "B",
+            "reason": "Prototype scope creates a new instance of a bean each time it is requested from the Spring container."
+        },
+        {
+            "question": "How does Inversion of Control (IoC) differ from Dependency Injection (DI)?",
+            "choices": ["A. IoC is an implementation of DI", "B. DI is an implementation of IoC", "C. They are unrelated", "D. DI replaces IoC completely"],
+            "answer": "B",
+            "reason": "Dependency Injection (DI) is a specific implementation of the broader Inversion of Control (IoC) principle."
+        },
+        {
+            "question": "Which of the following is a benefit of using AOP compared to traditional code coupling?",
+            "choices": ["A. Tightly couples cross-cutting concerns with business logic", "B. Centralizes cross-cutting concerns to improve modularity", "C. Eliminates the need for DI", "D. Increases code duplication"],
+            "answer": "B",
+            "reason": "AOP centralizes cross-cutting concerns (like logging, security), improving modularity and simplifying business logic."
+        },
+        {
+            "question": "Which AOP tool offers more advanced capabilities and supports compile-time weaving?",
+            "choices": ["A. Spring AOP", "B. BeanFactory", "C. AspectJ", "D. WebApplicationContext"],
+            "answer": "C",
+            "reason": "AspectJ is more powerful than Spring AOP and supports compile-time weaving and a broader range of join points."
+        },
+        {
+            "question": "Which AOP tool is simpler and integrated directly with the Spring Framework?",
+            "choices": ["A. AspectJ", "B. Java EE", "C. Spring AOP", "D. JBoss AOP"],
+            "answer": "C",
+            "reason": "Spring AOP is simpler than AspectJ and is directly integrated with the Spring Framework, suitable for common AOP use cases."
+        },
+        {
+            "question": "What is a key advantage of using Spring Boot compared to standard Spring Framework?",
+            "choices": ["A. Requires more configuration", "B. Forces XML-based configuration", "C. Provides auto-configuration and embedded servers for rapid development", "D. Only works with Spring MVC"],
+            "answer": "C",
+            "reason": "Spring Boot provides auto-configuration, embedded servers, and Spring Boot Starters for rapid application development."
+        },
+        {
+            "question": "How does standard Spring Framework differ from Spring Boot?",
+            "choices": ["A. Spring Boot requires XML config", "B. Spring Framework has auto-configuration", "C. Spring Boot simplifies setup with auto-configuration and embedded servers", "D. They are identical"],
+            "answer": "C",
+            "reason": "Spring Boot simplifies application setup with auto-configuration and embedded servers, while standard Spring Framework requires more manual configuration."
+        }
+    ],
+    "Lecture7: Communication Protocols & Software Architecture Patterns": [
+        {
+            "question": "Which architectural style is REST based on?",
+            "choices": ["A. FTP", "B. SMTP", "C. HTTP", "D. SOAP"],
+            "answer": "C",
+            "reason": "REST (Representational State Transfer) is based on HTTP and the standard CRUD operations (GET, POST, PUT, DELETE)."
+        },
+        {
+            "question": "Which REST principle ensures that each request contains all necessary information for processing?",
+            "choices": ["A. Client-Server", "B. Statelessness", "C. Cacheability", "D. Code on Demand"],
+            "answer": "B",
+            "reason": "The Statelessness principle ensures that each request in REST contains all the necessary information, and the server does not store client state between requests."
+        },
+        {
+            "question": "What is the main function of OpenAPI?",
+            "choices": ["A. Secure APIs", "B. Handle transactions", "C. Document and design REST APIs", "D. Encrypt data"],
+            "answer": "C",
+            "reason": "OpenAPI (formerly Swagger) is a specification used to document and design REST APIs, providing interactive tools and automation."
+        },
+        {
+            "question": "What does SOAP stand for?",
+            "choices": ["A. Simple Online Access Protocol", "B. Secure Object Access Protocol", "C. Simple Object Access Protocol", "D. Standard Object Application Protocol"],
+            "answer": "C",
+            "reason": "SOAP stands for Simple Object Access Protocol, used for exchanging structured information in web services."
+        },
+        {
+            "question": "In WSDL, which element defines the service interface?",
+            "choices": ["A. <definitions>", "B. <types>", "C. <portType>", "D. <binding>"],
+            "answer": "C",
+            "reason": "<portType> defines the set of operations (service interface) in a WSDL document."
+        },
+        {
+            "question": "Which messaging model ensures one message is consumed by only one consumer?",
+            "choices": ["A. Publish-Subscribe", "B. Message Streams", "C. Point-to-Point", "D. Fanout"],
+            "answer": "C",
+            "reason": "Point-to-Point messaging ensures that one message is consumed by only one consumer, typically via a queue."
+        },
+        {
+            "question": "Which RabbitMQ feature supports communication where one message can reach multiple subscribers?",
+            "choices": ["A. Point-to-Point", "B. RPC", "C. Publish-Subscribe", "D. Delayed Queue"],
+            "answer": "C",
+            "reason": "RabbitMQ supports Publish-Subscribe messaging through fanout exchanges, allowing one message to reach multiple subscribers."
+        },
+        {
+            "question": "What is the primary benefit of using Message-Oriented Middleware (MOM)?",
+            "choices": ["A. Tight coupling of systems", "B. High performance but complex integration", "C. Decouples producers and consumers", "D. Forces synchronous communication"],
+            "answer": "C",
+            "reason": "MOM decouples producers and consumers, enabling asynchronous and flexible communication between distributed systems."
+        },
+        {
+            "question": "Which Software Architecture Pattern is most commonly used for CRUD-heavy applications?",
+            "choices": ["A. Event-Driven Architecture", "B. Service-Oriented Architecture", "C. Microservices", "D. Layered Architecture"],
+            "answer": "D",
+            "reason": "Layered Architecture is commonly used for CRUD-heavy applications due to its simplicity and separation of concerns."
+        },
+        {
+            "question": "Which topology in Event-Driven Architecture uses a central event orchestrator?",
+            "choices": ["A. Broker", "B. Queue", "C. Mediator", "D. Stream"],
+            "answer": "C",
+            "reason": "In the Mediator topology of Event-Driven Architecture, a central event orchestrator coordinates events between producers and consumers."
+        },
+        {
+            "question": "Which is an advantage of REST over SOAP?",
+            "choices": ["A. More rigid structure", "B. Statelessness and simplicity", "C. Requires WSDL", "D. Primarily used with XML"],
+            "answer": "B",
+            "reason": "REST is stateless and simpler to implement compared to SOAP, which has a more rigid structure and typically requires WSDL."
+        },
+        {
+            "question": "Which messaging model supports real-time streaming and message replay?",
+            "choices": ["A. Point-to-Point", "B. Message Streams", "C. RPC", "D. Publish-Subscribe"],
+            "answer": "B",
+            "reason": "Message Streams (such as Apache Kafka) support real-time streaming and message replay through an append-only log."
+        },
+        {
+            "question": "What is a key benefit of using a Broker topology in Event-Driven Architecture?",
+            "choices": ["A. Centralized coordination of all events", "B. Maximal decoupling between producers and consumers", "C. Synchronous event handling", "D. Single point of failure"],
+            "answer": "B",
+            "reason": "The Broker topology in EDA provides maximal decoupling by having producers publish events to a broker that consumers subscribe to."
+        },
+        {
+            "question": "In which EDA topology does a central orchestrator manage the flow of events?",
+            "choices": ["A. Point-to-Point", "B. Broker", "C. Mediator", "D. Layered"],
+            "answer": "C",
+            "reason": "In the Mediator topology, a central orchestrator manages the flow of events between producers and consumers."
+        },
+        {
+            "question": "How do Architecture Patterns differ from Design Patterns?",
+            "choices": ["A. Architecture Patterns focus on small class interactions", "B. Architecture Patterns provide high-level structure for systems", "C. Design Patterns focus on major system components", "D. They are the same"],
+            "answer": "B",
+            "reason": "Architecture Patterns provide high-level structure for entire systems, while Design Patterns address class/object interactions."
+        },
+        {
+            "question": "Which of the following is an example of a Software Architecture Pattern?",
+            "choices": ["A. Factory Pattern", "B. Adapter Pattern", "C. Event-Driven Architecture", "D. Decorator Pattern"],
+            "answer": "C",
+            "reason": "Event-Driven Architecture is an example of a Software Architecture Pattern that structures system components around events."
+        },
+        {
+            "question": "Which is an advantage of Layered Architecture?",
+            "choices": ["A. High coupling between layers", "B. Familiarity and ease of development", "C. Single point of failure", "D. Difficult to test"],
+            "answer": "B",
+            "reason": "An advantage of Layered Architecture is its familiarity to developers and ease of development and maintenance."
+        },
+        {
+            "question": "Which is a disadvantage of Layered Architecture?",
+            "choices": ["A. Hard to maintain", "B. Difficult to develop", "C. Low agility and scalability", "D. Incompatible with CRUD-heavy apps"],
+            "answer": "C",
+            "reason": "A disadvantage of Layered Architecture is low agility and scalability, making it harder to scale or replace parts of the system."
+        },
+        {
+            "question": "Which transport protocols can SOAP use?",
+            "choices": ["A. HTTP only", "B. SMTP only", "C. Multiple protocols like HTTP, SMTP, TCP", "D. WebSockets only"],
+            "answer": "C",
+            "reason": "SOAP is protocol-agnostic and can use multiple transport protocols such as HTTP, SMTP, and TCP."
+        },
+        {
+            "question": "Which type of Web Service is typically faster due to using JSON and simpler structures?",
+            "choices": ["A. SOAP", "B. REST", "C. XML-RPC", "D. Streaming Web Services"],
+            "answer": "B",
+            "reason": "REST is typically faster and lighter because it often uses JSON and avoids the complex, strict structures of SOAP."
+        },
+        {
+            "question": "Which web service type typically uses a strict XML-based protocol?",
+            "choices": ["A. REST", "B. SOAP", "C. WebSockets", "D. JSON-RPC"],
+            "answer": "B",
+            "reason": "SOAP (Simple Object Access Protocol) is XML-based and follows a strict protocol for exchanging structured information."
+        },
+        {
+            "question": "Which web service type is typically faster and more lightweight, often using JSON?",
+            "choices": ["A. SOAP", "B. REST", "C. WSDL", "D. WebSockets"],
+            "answer": "B",
+            "reason": "REST is typically faster and more lightweight because it often uses JSON and avoids the strict structure of SOAP."
+        },
+        {
+            "question": "In MOM, which model ensures that a message is processed by only one consumer?",
+            "choices": ["A. Message Streams", "B. Publish-Subscribe", "C. Point-to-Point (Queues)", "D. RPC"],
+            "answer": "C",
+            "reason": "Point-to-Point messaging (Queues) ensures that a message is processed by only one consumer."
+        },
+        {
+            "question": "In MOM, which model supports real-time streaming and message replay?",
+            "choices": ["A. Point-to-Point (Queues)", "B. Publish-Subscribe", "C. Message Streams", "D. RPC"],
+            "answer": "C",
+            "reason": "Message Streams (such as those in Apache Kafka) support real-time streaming and message replay via an append-only log."
+        },
+        {
+            "question": "In EDA, which topology uses a central event orchestrator to manage events?",
+            "choices": ["A. Point-to-Point", "B. Publish-Subscribe", "C. Mediator", "D. Broker"],
+            "answer": "C",
+            "reason": "The Mediator topology in Event-Driven Architecture uses a central orchestrator to manage events between producers and consumers."
+        },
+        {
+            "question": "In EDA, which topology maximizes decoupling by letting producers publish to a broker and consumers subscribe to events?",
+            "choices": ["A. Point-to-Point", "B. Publish-Subscribe", "C. Mediator", "D. Broker"],
+            "answer": "D",
+            "reason": "The Broker topology maximizes decoupling by letting producers publish events to a broker, and consumers independently subscribe to events."
+        },
+        {
+            "question": "How do Architecture Patterns differ from Design Patterns?",
+            "choices": ["A. Architecture Patterns solve OOP class problems", "B. Architecture Patterns provide high-level system structure", "C. Design Patterns define system layers", "D. They are identical"],
+            "answer": "B",
+            "reason": "Architecture Patterns provide high-level system structure and help organize major components, while Design Patterns solve OOP class and object interaction problems."
+        },
+        {
+            "question": "Which is an example of an Architecture Pattern?",
+            "choices": ["A. Adapter Pattern", "B. Layered Architecture", "C. Decorator Pattern", "D. Factory Pattern"],
+            "answer": "B",
+            "reason": "Layered Architecture is an example of an Architecture Pattern that defines the overall structure of a system."
+        },
+        {
+            "question": "Which is an advantage of Layered Architecture?",
+            "choices": ["A. High testability and separation of concerns", "B. Tight coupling between layers", "C. Inflexibility in adding new features", "D. Difficult to maintain"],
+            "answer": "A",
+            "reason": "An advantage of Layered Architecture is its high testability and separation of concerns, making it easier to develop and maintain."
+        },
+        {
+            "question": "Which is a disadvantage of Layered Architecture?",
+            "choices": ["A. Supports only REST", "B. Architecture sinkhole and scalability issues", "C. Requires WebSockets", "D. Cannot be used with MOM"],
+            "answer": "B",
+            "reason": "Layered Architecture can suffer from architecture sinkholes (layers that do little) and low agility/scalability as disadvantages."
+        }
     ]
 }
